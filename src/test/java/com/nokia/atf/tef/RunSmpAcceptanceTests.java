@@ -12,7 +12,8 @@ import net.serenitybdd.junit.spring.integration.SpringIntegrationMethodRule;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features/smp",
-        glue = "com.nokia.atf.tef"
+        glue = "com.nokia.atf.tef",
+        plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json" }
        
 )
 public class RunSmpAcceptanceTests {
