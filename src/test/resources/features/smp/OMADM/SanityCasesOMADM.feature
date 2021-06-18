@@ -39,7 +39,7 @@ Scenario: MB_Sanity_DM_Upgrade-003- OMADM Create Device in LTE mode
    
   
 @MotiveBridge019
-Scenario: MB_Sanity_DM_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
+Scenario: OMADM-Create test suite
     
    Given user switch back to parent window
    Then user selects the "ActiveIcon" button
@@ -55,7 +55,7 @@ Scenario: MB_Sanity_DM_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
    And user verifies the test suite created
   
  @MotiveBridge019
-Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
+Scenario: Single-Auto & VZW_GENERIC_AUTO
     
    Given user switch back to parent window 
 	Then user select the created test Suite folder 
@@ -84,7 +84,7 @@ Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
      
  
  @MotiveBridge019
-Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal : MB_Regression_OMADM-005
+Scenario:  MB_Regression_OMADM-005 :VZW_GENERIC_UAT
     
    Given user switch back to parent window
    #Then user select the created test Suite folder
@@ -101,24 +101,7 @@ Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
    Then user closes the current window
     Then user closes the simulator in port "5546"
     
-    
-#   
-# @MotiveBridge019
-#Scenario: MB_Sanity_DM_Upgrade-003- Manage Firmware
-#
-#    Given user switch back to parent window
-#    Then user clicks on "Manage Firmware"
-#    Then user is navigated to the "Manage Firmware" create device page
-#    Then user selects the "VERIZON_IOT" button
-#    Then user selects the "SAMSUNG-SM-G360V" radio button
-#    Then user selects the "Upload_Firmware" button
-#    Then user upload the file with filename "SAM_SMG360V_SmallUpdate1435025262_1_G360VVRE2BOF2_G360VVRE2BOF3.xml"
-#     Then user selects the "bestFirmwareCheck" button
-#    Then user selects the "Upload" button
-#     Then user wait for some time
-#     Then user verifies the firmware job details 
-#      Then user closes the current window
-    
+   
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
 
