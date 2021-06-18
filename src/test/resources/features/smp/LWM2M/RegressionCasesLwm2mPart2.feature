@@ -1,4 +1,4 @@
-@dcon
+@RegressionLwm2mPart1
 Feature: Motive Bridge DM Sanity cases  001-004
 
 @MotiveBridge001

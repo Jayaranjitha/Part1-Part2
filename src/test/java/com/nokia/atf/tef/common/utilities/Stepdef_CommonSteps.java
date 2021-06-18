@@ -200,6 +200,16 @@ public class Stepdef_CommonSteps extends WEB_Methods {
 		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "UserName_textbox"), smpUsername);
 		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "Password_textbox"), smpPassword);
 	}
+	@Step
+	public void user_enters_usernamePasswordForRealDevice(String username, String password) throws Exception {
+
+		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "UserName_textbox"), username);
+		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "Password_textbox"), password);
+		
+	}
+	
+	
+	
 
 	@Step
 	public void user_enters_usernamePassword(String username, String password) throws Exception {
@@ -685,22 +695,19 @@ public class Stepdef_CommonSteps extends WEB_Methods {
 	@Step
 	public void user_Click_on_logOut(String user) throws Throwable {
 	
+		 driver.switchTo().window(parentWindow);
+	        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);	
+	        logger.info("smpusername is" +user);
+	        WEB_click(WEB_findElement("STRING",
+					"//span[contains(.,'"+user+"')]"));
 
-	    driver.switchTo().window(parentWindow);
-        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);	
-        logger.info("smpusername is" +user);
-        WEB_click(WEB_findElement("STRING",
-				"//span[contains(.,'"+user+"')]"));
+			WEB_click(WEB_findElement("STRING", "//a[contains(.,'Logout')]"));
+			logger.info("User Logged off successfully");
+	         
+			
+			driver.quit();
 
-		WEB_click(WEB_findElement("STRING", "//a[contains(.,'Logout')]"));
-		logger.info("User Logged off successfully");
-         
 		
-		driver.quit();
-		
-//		WEB_click(WEB_findElement("STRING", "//a[contains(.,'Logout')]"));
-//		logger.info("User Logged off successfully");
-//		driver.quit();
 	}
 
 
@@ -910,7 +917,8 @@ public static String jsonData(String jsonFileName) throws Exception {
 	}
 
 	public void userSwitchParentWindow() throws Exception {
-		
+
+		logger.info("Session id of parentwindow" +parentWindow);
 		  driver.switchTo().window(parentWindow);
 		  Thread.sleep(2000);
 	}

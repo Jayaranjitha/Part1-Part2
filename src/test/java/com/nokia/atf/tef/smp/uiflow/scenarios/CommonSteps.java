@@ -82,6 +82,14 @@ public class CommonSteps extends WEB_Methods {
 		CommonSteps.user_enters_usernamePassword(username, password);
 
 	}
+	
+	@Then("user enters username as \"([^\"]*)\" and password as \"([^\"]*)\" for realDevice testing$")
+	public void user_enters_usernamePasswordForRealDevice(String username, String password) throws Exception {
+		CommonSteps.user_enters_usernamePasswordForRealDevice(username, password);
+
+	}
+	
+	
 
 	//MB
 	@Then("^user clicks on login button$")
@@ -170,6 +178,10 @@ public class CommonSteps extends WEB_Methods {
 		
 		if(protocol.equalsIgnoreCase("CPP")) {		
 			stepDef_19A.CPPSimulatorRun();
+		}
+		
+		if(protocol.equalsIgnoreCase("RealDevice")) {		
+			stepDef_19A.realDeviceRun();
 		}
 		
 		

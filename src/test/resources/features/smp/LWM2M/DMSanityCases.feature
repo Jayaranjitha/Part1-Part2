@@ -1,4 +1,4 @@
-@SanityCases01
+@SanityCases10s
 Feature: Motive Bridge DM Sanity cases  001-004
 
 @MotiveBridge001
@@ -29,7 +29,7 @@ Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
     And user selects the "STOP" button
     And user runs the simulator "LWM2M"
     Then user select the "LWM2MCreateDevice" folders for test case "Create Device Bootstrap"
-   # Then user clicks on "Create Device Bootstrap" button
+   #Then user clicks on "Create Device Bootstrap" button
     Then user scroll to the left to "Play" button
     Then user selects the "Play" button
     Then user scrolls down the page
@@ -40,7 +40,7 @@ Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
     Then user selects the "Submit" button
     Then user validates the "Create Device Bootstrap" test results
    # MB_Sanity_DM_Upgrade-005
-  #   Then user select the "LWM2MCreateDevice" folders for test case "Create Device Bootstrap"
+  #Then user select the "LWM2MCreateDevice" folders for test case "Create Device Bootstrap"
    Then user clicks on "Create Device Bootstrap" button
     Then user scroll to the left to "Play" button
     Then user selects the "Play" button
@@ -178,8 +178,8 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA
      Then user verifies the job details  
       Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button
-      Then user wait for some time
-    Then user validates the "11.02 Firmware Update (Out-Band)" test results for "VZ_TC_LWM2MOTADM" test case
+     Then user wait for some time
+      Then user validates the "11.02 Firmware Update (Out-Band)" test results for "VZ_TC_LWM2MOTADM" test case
      Then user closes the simulator in port "5545"
      Then user closes the current window 
 
