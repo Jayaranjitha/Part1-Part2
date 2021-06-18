@@ -1,4 +1,4 @@
-@RegressionCase016
+@RegressionCasePart1OMADM
 Feature: Motive Bridge Regression Cases Part 01
 
 @MotiveBridge001
@@ -76,13 +76,13 @@ Scenario: MB_Regression_OMADM-008 & MB_Regression_OMADM-010
      Then user runs the simulator "OMADM" 
 	 Then user wait for "10" seconds
 	 Then user validates the "ReplaceNodeValueNI" test results for "UAT" test case 	
-     Then user closes the current window 
+    # Then user closes the current window 
 	 Then user closes the simulator in port "5546" 
 	
  @MotiveBridge019
 Scenario: MB_Regression_OMADM-008 & MB_Regression_OMADM-010
-    
-   Given user switch back to parent window 
+    Given user closes the current window 
+   Then user switch back to parent window 
 	#Then user select the created test Suite folder 
 	And user clicks on "Single-Auto" test set 
 	Then user clicks on the "AutomatedPlayButton"
@@ -99,13 +99,15 @@ Scenario: MB_Regression_OMADM-008 & MB_Regression_OMADM-010
 	Then user selects the "Play" button 
 	Then user runs the simulator "OMADM" 
 	Then user validates the "[3.4] Verify DevInfo Subtree" test results for "Auto" test case 
-	Then user closes the current window 
+	#Then user closes the current window 
 	Then user closes the simulator in port "5546" 
 	
 
 Scenario: VZW_GENERIC_AUTO :MB_Regression_OMADM-011, MB_Regression_OMADM-013,MB_Regression_OMADM-014
 
-   Given user switch back to parent window 
+Given user closes the current window 
+   Then user switch back to parent window 
+   #Given user switch back to parent window 
 	And user clicks on "VZW_GENERIC_AUTO" test set
 	Then user clicks on the "AutomatedPlayButton"
 	Then user is navigated to the "VZW_GENERIC_AUTO" testSet Page 
@@ -134,10 +136,12 @@ Scenario: VZW_GENERIC_AUTO :MB_Regression_OMADM-011, MB_Regression_OMADM-013,MB_
 	Then user runs the simulator "OMADM"
 	Then user validates the "[5.1] Verify VoLTE Subtree" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
-	Then user closes the current window 
+	#Then user closes the current window 
 
 Scenario: VZW_LTEFIELDOA_IOT_AUTO : MB_Regression_OMADM-015
-    Given user switch back to parent window 
+    
+    Given user closes the current window 
+   Then user switch back to parent window   
    # Then user select the created test Suite folder 
 	And user clicks on "VZW_LTEFIELDOA_IOT_AUTO" test set
 	Then user clicks on the "AutomatedPlayButton"
@@ -156,10 +160,12 @@ Scenario: VZW_LTEFIELDOA_IOT_AUTO : MB_Regression_OMADM-015
 	Then user checks the "- 1.- Execute TestModule GetIMSDetails"
 	Then user validates the "[4.1] Verify ConnMo_LTE Subtree" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
-	Then user closes the current window 
+	#Then user closes the current window 
 	
 Scenario: OMADM Delete Device
-    Given user switch back to parent window 
+    
+     Given user closes the current window 
+   Then user switch back to parent window  
     Then user clicks on "Manage Devices"
     Then user clicks on "VERIZON - IOT" protocol
     Then user is navigated to the "OMADMDeleteDevice" create device page  
@@ -176,12 +182,13 @@ Scenario: OMADM Delete Device
     Then user selects the devices to delete
     Then user selects the "Submit" button
      Then user validates the "DeleteDeviceList" test results for "UAT" test case 
-     Then user closes the current window 
+    # Then user closes the current window 
 
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
 
-
-    Given user Click on log off for the logged in user
+    Given user closes the current window 
+   Then user switch back to parent window  
+    Then user Click on log off for the logged in user
     Then user closes the simulator in port "5546" 
  
