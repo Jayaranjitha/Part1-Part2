@@ -1241,8 +1241,9 @@ public class Stepdef_19A extends WEB_Methods {
 		@Test
 		public void resourceValue(String resourceValue ) throws Exception {
 			
-			driver.findElement(By.xpath("//textarea[contains(@class,'form-control')]")).sendKeys(resourceValue);
-					
+//			driver.findElement(By.xpath("//textarea[contains(@class,'form-control')]")).sendKeys(resourceValue);
+			WEB_SendKeys(WEB_Methods.WEB_findElement("STRING", "//textarea[contains(@class,'form-control')]"),
+					resourceValue);				
 			
 		}
 		
