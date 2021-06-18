@@ -212,7 +212,7 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>com.nokia.pups-shared</groupId>
+			<groupId>com.nokia.pspp</groupId>
 			<artifactId>ana-common-testing-api-helper</artifactId>
 			<version>${lib.version}</version>
 			<exclusions>
@@ -247,7 +247,7 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>com.nokia.pups-shared</groupId>
+			<groupId>com.nokia.pspp</groupId>
 			<artifactId>smp-common-testing-nbi-soap-client</artifactId>
 			<version>${lib.version}</version>
 			<exclusions>
@@ -270,7 +270,7 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>com.nokia.pups-shared</groupId>
+			<groupId>com.nokia.pspp</groupId>
 			<artifactId>smp-nbi-rest-client</artifactId>
 			<version>${lib.version}</version>
 			<exclusions>
@@ -289,7 +289,7 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>com.nokia.pups-shared</groupId>
+			<groupId>com.nokia.pspp</groupId>
 			<artifactId>kafka-avro-ingestion</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 			<exclusions>

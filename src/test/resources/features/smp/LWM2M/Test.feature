@@ -10,7 +10,7 @@ Scenario: Sample Test
 #		| 1110           | Kenny               |1001| 1001|
 #		| 1001           | someone@someone.com |1001| 1001|
 		
-	Given user runs the simulator "LWM2M"
+	Given user runs the simulator "CPP"
 #     And user hits the action "AddObjectLWM2M-Server-/1/3" from the Impact
 	Then user is printing the data set 
 

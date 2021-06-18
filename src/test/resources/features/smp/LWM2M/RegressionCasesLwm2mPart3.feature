@@ -1,4 +1,4 @@
-@RegressionLWM2M03s
+@RegressionLwm2mPart1
 Feature: Motive Bridge DM Sanity cases  001-004
 
 @MotiveBridge001
@@ -28,8 +28,8 @@ Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
     And validate the "DeviceID" is unique for "LWM2M"
     And user selects the "STOP" button
     And user runs the simulator "LWM2M"
-    Then user select the "LWM2MCreateDevice" folders for test case "Create Device Bootstrap"
-  # Then user clicks on "Create Device Bootstrap" button
+     Then user select the "LWM2MCreateDevice" folders for test case "Create Device Bootstrap"
+   # Then user clicks on "Create Device Bootstrap" button
     Then user scroll to the left to "Play" button
     Then user selects the "Play" button
     Then user scrolls down the page
