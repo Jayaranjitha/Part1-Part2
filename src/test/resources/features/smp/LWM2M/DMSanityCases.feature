@@ -41,7 +41,7 @@ Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
     Then user validates the "Create Device Bootstrap" test results
    # MB_Sanity_DM_Upgrade-005
   #   Then user select the "LWM2MCreateDevice" folders for test case "Create Device Bootstrap"
- #   Then user clicks on "Create Device Bootstrap" button
+   Then user clicks on "Create Device Bootstrap" button
     Then user scroll to the left to "Play" button
     Then user selects the "Play" button
     Then user scrolls down the page
