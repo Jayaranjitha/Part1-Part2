@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import javax.jws.WebMethod;
+//import javax.jws.WebMethod;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.RandomStringUtils;
@@ -115,9 +115,16 @@ public class Stepdef_19A extends WEB_Methods {
 	@Value("${smp.nbi.uiworkflow.impactusername}")
 	private String impactUsername;
 	
+	@Value("${smp.nbi.uiworkflow.realDeviceID}")
+	private String realDeviceID;
+	
+
+	@Value("${smp.nbi.uiworkflow.realMSISDN}")
+	private String realMSISDN;
+
 	@Value("${smp.nbi.uiworkflow.impactpassword}")
 	private String impactPassword;
-
+	
 	public static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());;
 
 	public static String fileTypes = "";
@@ -465,19 +472,52 @@ public class Stepdef_19A extends WEB_Methods {
 		      
 			}
 		@Step
-		public void closeCurrentwindow() throws Exception {
+		public void closeCurrentwindow() throws Exception {		
 			
-			driver.close();
+			 for(String handle : driver.getWindowHandles()) {
+			        if (!handle.equals(CommonSteps.parentWindow)) {
+			            driver.switchTo().window(handle);
+			            driver.close();
+			        }
+			    }
+			//driver.close();
 		}
 		
 		
 	
 		@Step
+		public void testCaseRealDevice(String testcase) throws Exception {
+		       try {
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[contains(.,'Test Results')]")));
+				 if(driver.findElements(By.xpath("//span[contains(.,'Passed')]")).size()>=1){
+			        String text = driver.findElement(By.xpath("//span[contains(.,'Passed')]")).getText();
+				   logger.info("Test Case is" +text);
+				   
+				 }
+				 
+				 if(driver.findElements(By.xpath("//span[contains(.,'Failed')]")).size()>=1){
+					 
+				logger.info("Test case is failed. Please look into logs for more details" +driver.findElement(By.xpath("//div[contains(@class,'test-case-error-message')]")).getText());
+						  
+				 }	
+				  // Assert.assertEquals(true, tag.contains(driver.findElement(By.xpath("//td[contains(text(),'"+tag+"')]")).getText()));
+				   Assert.assertEquals("Test case link", testcase, driver.findElement(By.xpath("(//a[contains(@class,'test-case-link')])[1]")).getText());
+				   
+			} catch (AssertionError e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				logger.info("Assertion error" +e);
+			}
+		     
+			}
+		
+		@Step
 		public void testCaseTestRsult(String textValue,String tag) throws Exception {
 		       try {
-				driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				if(driver.findElements(By.xpath("//h6[contains(.,'Test Results')]")).size()<1) {
-					driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+					driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 				}
 				
 				   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[contains(.,'Test Results')]")));
@@ -491,11 +531,8 @@ public class Stepdef_19A extends WEB_Methods {
 				 if(driver.findElements(By.xpath("//span[contains(.,'Failed')]")).size()>=1){
 					 
 				logger.info("Test case is failed. Please look into logs for more details" +driver.findElement(By.xpath("//div[contains(@class,'test-case-error-message')]")).getText());
-				
-			  
-				 }
-				 
-				
+						  
+				 }	
 				  // Assert.assertEquals(true, tag.contains(driver.findElement(By.xpath("//td[contains(text(),'"+tag+"')]")).getText()));
 				   Assert.assertEquals("Test case link", textValue, driver.findElement(By.xpath("(//a[contains(@class,'test-case-link')])[1]")).getText());
 				   
@@ -1073,7 +1110,7 @@ public class Stepdef_19A extends WEB_Methods {
 		@Step
 		public void selectTestSuiteFolder() throws Exception {
 			Stepdef_CommonSteps.parentGUID=driver.getWindowHandle();
-			//Stepdef_CommonSteps.friendlyName="000863047618011_AT673";
+		//	Stepdef_CommonSteps.friendlyName="357862090060866_AT855";
 			
 			Thread.sleep(1000);
 			int sizes= driver.findElements(By.xpath("//i[contains(@class,'jstree-icon jstree-ocl')]")).size();
@@ -1241,9 +1278,10 @@ public class Stepdef_19A extends WEB_Methods {
 		@Test
 		public void resourceValue(String resourceValue ) throws Exception {
 			
-//			driver.findElement(By.xpath("//textarea[contains(@class,'form-control')]")).sendKeys(resourceValue);
+			//driver.findElement(By.xpath("//textarea[contains(@class,'form-control')]")).sendKeys(resourceValue);
+					
 			WEB_SendKeys(WEB_Methods.WEB_findElement("STRING", "//textarea[contains(@class,'form-control')]"),
-					resourceValue);				
+					resourceValue);
 			
 		}
 		
@@ -2094,6 +2132,12 @@ public class Stepdef_19A extends WEB_Methods {
  	    // ftp.disconnect();
 	}
 
+    public void realDeviceRun() throws Exception {
+    	
+    	Stepdef_CommonSteps.lwm2miccid= realDeviceID;
+    	Stepdef_CommonSteps.lwm2mmsisdn= realMSISDN;
+    }
+    
 	
 	
 	 public void checksandStart(String stepname) throws Exception {

@@ -301,6 +301,14 @@ public class Steps_19A extends WEB_Methods {
 		Report_getscreenShot("Test Case");
 	}
 	
+	@Then("^user validates the test results for \"([^\"]*)\" test case$")
+	public void testCaseRealDevice(String testcase) throws Exception {
+		Operations.testCaseRealDevice(testcase);
+		Report_getscreenShot("Test Case");
+	}
+	
+	
+	
 	@Then("^user enters the \"([^\"]*)\" value as \"([^\"]*)\"$")
 	public void textFieldAndTextValue(String fieldName,String fieldValue) throws Exception {
 		Operations.textFieldAndTextValue(fieldName,fieldValue);
