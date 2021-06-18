@@ -515,9 +515,9 @@ public class Stepdef_19A extends WEB_Methods {
 		@Step
 		public void testCaseTestRsult(String textValue,String tag) throws Exception {
 		       try {
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 				if(driver.findElements(By.xpath("//h6[contains(.,'Test Results')]")).size()<1) {
-					driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+					driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				}
 				
 				   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[contains(.,'Test Results')]")));

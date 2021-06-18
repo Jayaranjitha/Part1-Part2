@@ -132,7 +132,7 @@ Scenario: MB_Regression_LWM2M-019-VZW-Chapter08Cases
 	Then user validates the "8.05 Max Message Size" test results for "VZ_TC_LWM2MOTADM" test case
 	Then user select the "VZ_TC_LWM2MOTADM_10446" folders for test case "8.06 Average Message Size" 
 	Then user selects the "Play" button
-	Then user wait for "5" seconds
+	Then user wait for "6" seconds
 	Then user validates the "8.06 Average Message Size" test results for "VZ_TC_LWM2MOTADM" test case
 	Then user closes the current window   
 	

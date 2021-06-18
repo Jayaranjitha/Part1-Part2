@@ -35,13 +35,14 @@ Scenario: MB_Sanity_DM_Upgrade-003- OMADM Create Device in LTE mode
     Then user scroll to the right to "Submit" button
     Then user selects the "Submit" button
     Then user validates the "createDeviceLTE" test results for "UAT" test case
-    Then user closes the current window
+    #Then user closes the current window
    
   
 @MotiveBridge019
 Scenario: OMADM-Create test suite
     
-   Given user switch back to parent window
+    Given user closes the current window
+    Then user switch back to parent window
    Then user selects the "ActiveIcon" button
    Then user select the "VERIZON - IOT" folder
    Then user create a folder "Automation_ReleaseOMADM"
@@ -78,7 +79,7 @@ Scenario: Single-Auto & VZW_GENERIC_AUTO
 	Then user selects the "Play" button 
 	Then user runs the simulator "OMADM" 
 	Then user validates the "[3.5] Verify DevDetail Subtree" test results for "Auto" test case 
-	Then user closes the current window 
+	#Then user closes the current window 
 	Then user closes the simulator in port "5546" 
 	
      
@@ -86,7 +87,8 @@ Scenario: Single-Auto & VZW_GENERIC_AUTO
  @MotiveBridge019
 Scenario:  MB_Regression_OMADM-005 :VZW_GENERIC_UAT
     
-   Given user switch back to parent window
+    Given user closes the current window
+    Then user switch back to parent window
    #Then user select the created test Suite folder
    And user clicks on "VZW_GENERIC_UAT" test set
   Then user selects the "PlayButton" button
@@ -98,13 +100,13 @@ Scenario:  MB_Regression_OMADM-005 :VZW_GENERIC_UAT
    Then user runs the simulator "OMADM"
   # Then user wait for some time
    Then user validates the "ScriptCommandsNI" test results for "UAT" test case
-   Then user closes the current window
     Then user closes the simulator in port "5546"
     
    
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
-
-    Given user Click on log off for the logged in user
+    Given user closes the current window
+    Then user switch back to parent window
+    Then user Click on log off for the logged in user
    # Then user closes the simulator in port "5545"
     
