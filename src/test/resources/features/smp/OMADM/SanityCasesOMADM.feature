@@ -122,6 +122,5 @@ Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
 
-    Given user Click on log off for the logged in user
    # Then user closes the simulator in port "5545"
     

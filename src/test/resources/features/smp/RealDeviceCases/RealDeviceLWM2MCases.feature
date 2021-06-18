@@ -1,4 +1,4 @@
-@SanityCases01
+@SanityCases01e
 Feature: Motive Bridge DM Sanity cases  001-004
 
 @MotiveBridge001

@@ -686,9 +686,21 @@ public class Stepdef_CommonSteps extends WEB_Methods {
 	public void user_Click_on_logOut(String user) throws Throwable {
 	
 
+	    driver.switchTo().window(parentWindow);
+        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);	
+        logger.info("smpusername is" +user);
+        WEB_click(WEB_findElement("STRING",
+				"//span[contains(.,'"+user+"')]"));
+
 		WEB_click(WEB_findElement("STRING", "//a[contains(.,'Logout')]"));
 		logger.info("User Logged off successfully");
+         
+		
 		driver.quit();
+		
+//		WEB_click(WEB_findElement("STRING", "//a[contains(.,'Logout')]"));
+//		logger.info("User Logged off successfully");
+//		driver.quit();
 	}
 
 
