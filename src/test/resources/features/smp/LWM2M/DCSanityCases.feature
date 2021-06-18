@@ -1,4 +1,4 @@
-@SanityCases
+@SanityCasessc
 Feature: Motive Bridge DM Sanity cases  001-004 
 
 @MotiveBridge001 
@@ -104,12 +104,14 @@ Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
 	Then user select the "CONTINUE" from status to start the test 
 	Then user selects the "Submit" button 
 	Then user validates the "12.03 Cancel Observations (Using RESET Message)" test results for "VZ_TC_LWM2MOTADM" test case 
-	Then user closes the current window 
+	#Then user closes the current window 
 	Then user closes the simulator in port "5546" 
 @MotiveBridge019 
 Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal 
-
-     Given user switch back to parent window 
+  
+     Given user closes the current window
+    Then user switch back to parent window
+    # Given user switch back to parent window 
    # Then user select the created test Suite folder 
      And user clicks on "VZW-Ch02-Server-Parameters-LWM2M" test set 
 	Then user selects the "PlayButton" button 
@@ -127,13 +129,14 @@ Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
 	And user hits the action "AddObjectLWM2M-Server-/1/3" from the Impact
 	Then user wait for some time
 	Then user validates the "2.14 Notification Storing When Disabled or Offline (Repository server)" test results for "VZ_TC_LWM2MOTADM" test case 	
-	Then user closes the current window 
+#	Then user closes the current window 
 
 	
 @MotiveBridge019 
 Scenario: Logout from Motive Bridge 
-
-	Given user Click on log off for the logged in user 
+    Given user closes the current window
+    Then user switch back to parent window
+	And user Click on log off for the logged in user 
 	Then user closes the simulator in port "5545" 
 	Then user closes the simulator in port "5546" 
     

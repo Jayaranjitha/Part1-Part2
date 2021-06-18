@@ -98,13 +98,13 @@ Scenario: MB_Sanity_DM_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
      Then user enters the resource as "READ /3/0/3"
      Then user selects the "Submit" button
     Then user validates the "SingleNode_Operations_DM_Server" test results for "203000" test case
-    Then user closes the current window
+  #  Then user closes the current window
 
 
 @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
-   
-   Given user switch back to parent window
+   Given user closes the current window
+   Then user switch back to parent window
   # Then user select the created test Suite folder
    And user clicks on "VZW-Chapter04Cases" test set
    Then user clicks on the "AutomatedPlayButton"
@@ -112,13 +112,14 @@ Scenario: MB_Sanity_DM_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
    Then user select the "ReadAndWriteDeviceNodes_4_13" folders for test case "4.13 Battery Level"
    Then user selects the "Play" button
    Then user validates the "4.13 Battery Level" test results for "VZ_TC_LWM2MOTADM" test case
-    Then user closes the current window
+ #   Then user closes the current window
    Then user closes the simulator in port "5545"
    
   @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch13-UAT-Special-Tests 
     
-   Given user switch back to parent window
+   Given user closes the current window
+   Then user switch back to parent window
    #Then user select the created test Suite folder
    And user clicks on "VZW-Ch13-UAT-Special-Tests" test set
    Then user selects the "PlayButton" button
@@ -133,13 +134,15 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch13-UAT-Special-Tests
     Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button
     Then user validates the "13.03 SMS Based Device Reboot" test results for "VZ_TC_LWM2MOTADM" test case
-    Then user closes the current window 
+    #Then user closes the current window 
     Then user closes the simulator in port "5545"
  
  @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA 
     
-     Given user switch back to parent window
+     Given user closes the current window
+   Then user switch back to parent window
+    # Given user switch back to parent window
      And user clicks on "VZW-Ch11-FOTA" test set
      Then user selects the "PlayButton" button
      Then user is navigated to the "VZW-Ch11-FOTA" testSet Page
@@ -181,12 +184,13 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA
      Then user wait for some time
       Then user validates the "11.02 Firmware Update (Out-Band)" test results for "VZ_TC_LWM2MOTADM" test case
      Then user closes the simulator in port "5545"
-     Then user closes the current window 
+    
 
  @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-003- Manage Firmware
 
-    #Given user switch back to parent window
+     Given user closes the current window
+   Then user switch back to parent window
     Then user clicks on "Manage Firmware"
     Then user is navigated to the "Manage Firmware" create device page
     Then user selects the "VERIZON[LWM2M]_IOT" button

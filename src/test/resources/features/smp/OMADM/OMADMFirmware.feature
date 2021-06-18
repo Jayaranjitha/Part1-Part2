@@ -1,4 +1,4 @@
-@MotiveBridgejkd
+@Firmware
 Feature: Motive Bridge DM Sanity cases  001-004
 
 @MotiveBridge001
@@ -27,12 +27,12 @@ Scenario: MB_Sanity_DM_Upgrade-003- Delete Firmware
     Then user selects the "Delete" button
     Then user wait for "10" seconds
     Then user verifies the deleted firmware job details for "SAM_SMG360V_SmallUpdate1435025262_1_G360VVRE2BOF7_G360VVRE2BOF8_Auto"
-    Then user closes the current window
+  #  Then user closes the current window
     
  @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-003- Upload Firmware
-    
-    Given user switch back to parent window
+    Given user closes the current window
+    Then user switch back to parent window
     Then user clicks on "Manage Firmware"
     Then user is navigated to the "Manage Firmware" create device page
     Then user wait for "10" seconds
@@ -45,13 +45,14 @@ Scenario: MB_Sanity_DM_Upgrade-003- Upload Firmware
     Then user wait for some time
     Then user scrolls down the window
     Then user verifies the firmware job details for OMADM
-    Then user closes the current window
+  #  Then user closes the current window
 
 
  @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-003- Edit Firmware
 
-    Given user switch back to parent window
+     Given user closes the current window
+    Then user switch back to parent window
     Then user clicks on "Manage Firmware"
     Then user is navigated to the "Manage Firmware" create device page
     Then user wait for "10" seconds
@@ -63,12 +64,13 @@ Scenario: MB_Sanity_DM_Upgrade-003- Edit Firmware
     Then user edits the firmware image information
     Then user selects the "SubmitUpdate" button
     Then user verifies the success message
-    Then user closes the current window
+   # Then user closes the current window
     
     
  Scenario: MB_Sanity_DM_Upgrade-003- Clone_Firmware
 
-    Given user switch back to parent window
+     Given user closes the current window
+    Then user switch back to parent window
     Then user clicks on "Manage Firmware"
     Then user is navigated to the "Manage Firmware" create device page
     Then user wait for "10" seconds
@@ -80,12 +82,13 @@ Scenario: MB_Sanity_DM_Upgrade-003- Edit Firmware
     Then user edits the firmware image information to clone for "SAM_SMG360V_SmallUpdate1435025262_1_G360VVRE2BOF7_G360VVRE2BOF8_Auto_01"
     Then user selects the "SubmitUpdate" button
     Then user verifies the success message for clone
-    Then user closes the current window
+  #  Then user closes the current window
     
     @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-003- Delete cloned Firmware
 
-   Given user switch back to parent window
+    Given user closes the current window
+    Then user switch back to parent window
     Then user clicks on "Manage Firmware"
     Then user is navigated to the "Manage Firmware" create device page
     Then user wait for "10" seconds
@@ -95,11 +98,13 @@ Scenario: MB_Sanity_DM_Upgrade-003- Delete cloned Firmware
     Then user delete the firmware Image name "SAM_SMG360V_SmallUpdate1435025262_1_G360VVRE2BOF7_G360VVRE2BOF8_Auto_01"
     Then user selects the "Delete" button
     Then user verifies the deleted firmware job details for "SAM_SMG360V_SmallUpdate1435025262_1_G360VVRE2BOF7_G360VVRE2BOF8_Auto_01"
-    Then user closes the current window
+    #Then user closes the current window
     
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
-
-    Given user Click on log off for the logged in user
+  
+    Given user closes the current window
+    Then user switch back to parent window
+    Then user Click on log off for the logged in user
   
     
