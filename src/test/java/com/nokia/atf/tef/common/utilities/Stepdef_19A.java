@@ -1059,7 +1059,7 @@ public class Stepdef_19A extends WEB_Methods {
 			
 		    driver.manage().timeouts().implicitlyWait(2000,TimeUnit.SECONDS);
 			WEB_dropDown("STRING", "//select[@class='form-control']", testStatus);
-					
+			Report_getscreenShot("Status Select Screenshot");
 			//driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);	
 		}
 		
@@ -1581,7 +1581,14 @@ public class Stepdef_19A extends WEB_Methods {
     	
     	String filepath = System.getProperty("user.dir") + "\\TestData\\"+protocol+"\\"+fileName;
     	logger.info("Filepath is" +filepath);
-    	uploadAFile(fileName,filepath);
+    	
+    	
+    	    
+    			WebElement uploadElement = 
+    			                driver.findElement(By.xpath("//span[@id='fileupload']/input"));
+    			  uploadElement.sendKeys(filepath);
+    			  
+    	//uploadAFile(fileName,filepath);
     }
     
     @Step

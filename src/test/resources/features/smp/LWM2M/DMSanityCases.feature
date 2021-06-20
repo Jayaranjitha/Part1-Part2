@@ -162,14 +162,14 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA
      Then user verifies the job details  
       Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button
-      Then user wait for some time
-    Then user validates the "11.01 Firmware Update (In-Band)" test results for "VZ_TC_LWM2MOTADM" test case
+     Then user wait for some time
+     Then user validates the "11.01 Firmware Update (In-Band)" test results for "VZ_TC_LWM2MOTADM" test case
      Then user closes the simulator in port "5545"
     Then user select the "DownloadAndUpdate_OOB" folders for test case "11.02 Firmware Update (Out-Band)"
     Then user selects the "Play" button
      And user runs the simulator "LWM2M"
     Then user select the "CONTINUE" from status to start the test
-      Then user scroll to the right to "Submit" button
+     Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button   
       Then user selects the "CheckJobStatus" button
      Then user wait for some time
