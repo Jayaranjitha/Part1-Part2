@@ -478,8 +478,9 @@ public class Steps_19A extends WEB_Methods {
 
 	@Then("^user wait for some time$")
 	public void user_wait() throws Exception {
-
+          
 		Thread.sleep(7000);
+		Report_getscreenShot("Current Page");
 		// Thread.sleep(1*60*1000);
 	}
 

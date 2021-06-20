@@ -1,4 +1,4 @@
-@DCSanityCases  @test 
+@DCSanityCases  @testjenkins
 Feature: Motive Bridge DC Sanity cases  
 
 @MotiveBridge001 

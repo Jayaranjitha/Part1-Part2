@@ -1,4 +1,4 @@
-@DMSanityCases
+@DMSanityCases @testjenkins
 Feature: Motive Bridge DM Sanity cases  001-004
 
 @MotiveBridge019
@@ -186,29 +186,31 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA
      Then user closes the simulator in port "5545"
     
 
- @MotiveBridge019
-Scenario: MB_Sanity_DM_Upgrade-003- Manage Firmware
-
-     Given user closes the current window
-    Then user switch back to parent window
-    Then user clicks on "Manage Firmware"
-    Then user is navigated to the "Manage Firmware" create device page
-    Then user selects the "VERIZON[LWM2M]_IOT" button
-    Then user selects the "Generic-LWM2MGenericDevice" button
-    Then user selects the "Upload_Firmware" button
-    Then user scrolls down the window 
-    Then user upload the file with filename "Generic_1_2.bin" for "LWM2M"
-    Then user enters the value of "Pre-Requisite"
-    Then user enters the value of "Version"
-    Then user selects the "Upload" button
-     Then user wait for some time
-     Then user verifies the firmware job details 
-     Then user closes the current window
+# @MotiveBridge019
+#Scenario: MB_Sanity_DM_Upgrade-003- Manage Firmware
+#
+#     Given user closes the current window
+#    Then user switch back to parent window
+#    Then user clicks on "Manage Firmware"
+#    Then user is navigated to the "Manage Firmware" create device page
+#    Then user selects the "VERIZON[LWM2M]_IOT" button
+#    Then user selects the "Generic-LWM2MGenericDevice" button
+#    Then user selects the "Upload_Firmware" button
+#    Then user scrolls down the window 
+#    Then user upload the file with filename "Generic_1_2.bin" for "LWM2M"
+#    Then user enters the value of "Pre-Requisite"
+#    Then user enters the value of "Version"
+#    Then user selects the "Upload" button
+#     Then user wait for some time
+#     Then user verifies the firmware job details 
+#     Then user closes the current window
 
  
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
 
+ Given user closes the current window
+    Then user switch back to parent window
     Given user Click on log off for the logged in user
     Then user closes the simulator in port "5545"
     

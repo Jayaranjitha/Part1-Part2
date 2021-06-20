@@ -515,12 +515,13 @@ public class Stepdef_19A extends WEB_Methods {
 		@Step
 		public void testCaseTestRsult(String textValue,String tag) throws Exception {
 		       try {
-				driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		    	   Report_getscreenShot("Before Validation Page");
+				driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
 				if(driver.findElements(By.xpath("//h6[contains(.,'Test Results')]")).size()<1) {
 					driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				}
 				
-				  // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[contains(.,'Test Results')]")));
+				  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[contains(.,'Test Results')]")));
 				 if(driver.findElements(By.xpath("//span[contains(.,'Passed')]")).size()>=1){
 				   Assert.assertEquals("Test case Status","Passed", driver.findElement(By.xpath("//span[contains(.,'Passed')]")).getText());
 				   Thread.sleep(1000);
@@ -533,6 +534,7 @@ public class Stepdef_19A extends WEB_Methods {
 				logger.info("Test case is failed. Please look into logs for more details" +driver.findElement(By.xpath("//div[contains(@class,'test-case-error-message')]")).getText());
 						  
 				 }	
+				 Report_getscreenShot("Validation Page");
 				  // Assert.assertEquals(true, tag.contains(driver.findElement(By.xpath("//td[contains(text(),'"+tag+"')]")).getText()));
 				   Assert.assertEquals("Test case link", textValue, driver.findElement(By.xpath("(//a[contains(@class,'test-case-link')])[1]")).getText());
 				   

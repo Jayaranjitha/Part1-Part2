@@ -1,4 +1,4 @@
-@Firmware @test 
+@Firmware @test @testlocal
 Feature: Motive Bridge OMADM Firmware Specific Cases
 
 @MotiveBridge001
@@ -103,6 +103,25 @@ Scenario: MB_Sanity_DM_Upgrade-003- Delete cloned Firmware
     Then user verifies the deleted firmware job details for "SAM_SMG360V_SmallUpdate1435025262_1_G360VVRE2BOF7_G360VVRE2BOF8_Auto_01"
     #Then user closes the current window
     
+    
+ @MotiveBridge019
+Scenario: MB_Sanity_DM_Upgrade-003- Manage Firmware Lwm2m
+
+     Given user closes the current window
+    Then user switch back to parent window
+    Then user clicks on "Manage Firmware"
+    Then user is navigated to the "Manage Firmware" create device page
+    Then user selects the "VERIZON[LWM2M]_IOT" button
+    Then user selects the "Generic-LWM2MGenericDevice" button
+    Then user selects the "Upload_Firmware" button
+    Then user scrolls down the window 
+    Then user upload the file with filename "Generic_1_2.bin" for "LWM2M"
+    Then user enters the value of "Pre-Requisite"
+    Then user enters the value of "Version"
+    Then user selects the "Upload" button
+     Then user wait for some time
+     Then user verifies the firmware job details 
+     
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
   
