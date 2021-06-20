@@ -1,7 +1,7 @@
-@SanityCases10s
+@DMSanityCases
 Feature: Motive Bridge DM Sanity cases  001-004
 
-@MotiveBridge001
+@MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
   
 	Given user is already on Login Page 
@@ -190,7 +190,7 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA
 Scenario: MB_Sanity_DM_Upgrade-003- Manage Firmware
 
      Given user closes the current window
-   Then user switch back to parent window
+    Then user switch back to parent window
     Then user clicks on "Manage Firmware"
     Then user is navigated to the "Manage Firmware" create device page
     Then user selects the "VERIZON[LWM2M]_IOT" button

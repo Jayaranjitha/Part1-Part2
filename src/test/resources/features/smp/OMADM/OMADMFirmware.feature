@@ -1,4 +1,4 @@
-@Firmware @test @testomadm
+@Firmware @test 
 Feature: Motive Bridge OMADM Firmware Specific Cases
 
 @MotiveBridge001
