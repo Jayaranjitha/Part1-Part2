@@ -1586,7 +1586,8 @@ public class Stepdef_19A extends WEB_Methods {
     	    
     			WebElement uploadElement = 
     			                driver.findElement(By.xpath("//span[@id='fileupload']/input"));
-    			  uploadElement.sendKeys(filepath);
+    			uploadElement.clear();
+    			uploadElement.sendKeys(filepath);
     			  
     	//uploadAFile(fileName,filepath);
     }
