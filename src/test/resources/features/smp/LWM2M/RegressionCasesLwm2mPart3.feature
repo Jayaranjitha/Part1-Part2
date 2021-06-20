@@ -1,5 +1,5 @@
 @RegressionLwm2mPart1 @test
-Feature: Motive Bridge DM Sanity cases  001-004
+Feature: Motive Bridge DM Regression Cases VZW-Chapter04Cases,Chapter07Cases &Chapter15Cases
 
 @MotiveBridge001
 Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
@@ -42,7 +42,7 @@ Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
    Then user closes the current window
    
 @MotiveBridge019 
-Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal 
+Scenario: MB_Sanity_DC_Upgrade-004-Adding test subscriptions for Lwm2m test cases
 
 	Given user switch back to parent window 
 	Then user selects the "ActiveIcon" button 
@@ -58,7 +58,7 @@ Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
 	And user verifies the test suite created 
 	
  @MotiveBridge019 
-Scenario: MB_Regression_LWM2M-019-VZW-Chapter03Cases
+Scenario: MB_Regression_LWM2M-VZW-Chapter04Cases
 
      Given user switch back to parent window 
     Then user select the created test Suite folder 
@@ -92,12 +92,14 @@ Scenario: MB_Regression_LWM2M-019-VZW-Chapter03Cases
 	Then user select the "ReadAndWriteDeviceNodes_4_23" folders for test case "4.23 Supported Binding and Modes" 
 	Then user selects the "Play" button
 	Then user validates the "4.23 Supported Binding and Modes" test results for "VZ_TC_LWM2MOTADM" test case
-	Then user closes the current window 
+	
  
   @MotiveBridge019 
-Scenario: MB_Regression_LWM2M-019-VZW-Chapter07Cases
+Scenario: MB_Regression_LWM2M-VZW-Chapter07Cases
 
-    Given user switch back to parent window 
+    
+     Given user closes the current window 
+     Then user switch back to parent window 
    # Then user select the created test Suite folder 
     And user clicks on "VZW-Chapter07Cases" test set 
 	Then user clicks on the "AutomatedPlayButton"
@@ -112,12 +114,13 @@ Scenario: MB_Regression_LWM2M-019-VZW-Chapter07Cases
     Then user select the "ReadLocationNodes_7_05" folders for test case "7.05 Timestamp" 
 	Then user selects the "Play" button
 	Then user validates the "7.05 Timestamp" test results for "VZ_TC_LWM2MOTADM" test case 
-	Then user closes the current window
+	
 
 @MotiveBridge019 
-Scenario: MB_Regression_LWM2M-019-VZW-Chapter08Cases
+Scenario: MB_Regression_LWM2M-VZW-Chapter15Cases
 
-    Given user switch back to parent window 
+     Given user closes the current window 
+     Then user switch back to parent window 
     #Then user select the created test Suite folder 
     And user clicks on "VZW-Chapter15Cases" test set 
 	Then user selects the "PlayButton" button 
@@ -141,6 +144,8 @@ Scenario: MB_Regression_LWM2M-019-VZW-Chapter08Cases
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
 
-    Given user Click on log off for the logged in user
+      Given user closes the current window 
+     Then user switch back to parent window 
+    Then user Click on log off for the logged in user
     Then user closes the simulator in port "5545"
     

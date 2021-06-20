@@ -55,7 +55,7 @@ Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
    
   
 @MotiveBridge019
-Scenario: MB_Sanity_DM_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
+Scenario: MB_Sanity_DM_Upgrade-004-Adding test subscriptions for Lwm2m test cases
     
    Given user switch back to parent window
    Then user selects the "ActiveIcon" button

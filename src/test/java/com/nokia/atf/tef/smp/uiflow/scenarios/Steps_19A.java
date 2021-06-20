@@ -487,6 +487,7 @@ public class Steps_19A extends WEB_Methods {
 	public void user_wait_onemin(String seconds) throws Exception {
 		Thread.sleep(Integer.parseInt(seconds)*1000);
 		logger.info(driver.getCurrentUrl());
+		Report_getscreenShot("Current Page");
 	}
 
 	@Then("^user wait for some times$")

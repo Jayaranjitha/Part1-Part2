@@ -1,5 +1,5 @@
 @testx @test
-Feature: Motive Bridge DM Sanity cases  001-004
+Feature: Motive Bridge -Real device related LWM2M cases
 
 @MotiveBridge001
 Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
@@ -17,7 +17,7 @@ Scenario: MB_Sanity_DM_Upgrade-001-Motive Bridge UI validation
 
   
 @MotiveBridge019
-Scenario: MB_Sanity_DM_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
+Scenario: MB_Sanity_DM_Upgrade-004-Adding test subscriptions for Lwm2m test cases
     
    Given user runs the simulator "RealDevice"
    Then user switch back to parent window

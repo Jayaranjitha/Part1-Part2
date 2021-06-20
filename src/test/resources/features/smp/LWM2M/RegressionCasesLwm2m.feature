@@ -1,5 +1,5 @@
 @RegressionLwm2mPart1 @test
-Feature: Motive Bridge DM Sanity cases  001-004
+Feature: Motive Bridge DM Regression Cases LwM2M
 
 @MotiveBridge001
 Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
@@ -43,7 +43,7 @@ Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
    
   
 @MotiveBridge019
-Scenario: MB_Saity_DM_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
+Scenario: MB_Saity_DM_Upgrade-004-Adding test subscriptions for Lwm2m test cases
     
    Given user switch back to parent window
    Then user selects the "ActiveIcon" button
@@ -108,12 +108,14 @@ Scenario: MB_Regression_LWM2M-002- VZW-Ch11-FOTA-WIFI-ON
      Then user wait for some time
      Then user validates the "11.03 Device powers off during FW Download OB Wifi On" test results for "VZ_TC_LWM2MOTADM" test case
      Then user closes the simulator in port "5545"
-     Then user closes the current window 
+  #   Then user closes the current window 
 
  @MotiveBridge019
 Scenario: MB_Regression_LWM2M-002- VZW-Ch11-FOTA-WIFI-ON
      #MB_Regression_LWM2M-002
-     Given user switch back to parent window
+     Given user closes the current window
+    Then user switch back to parent window
+   #  Given user switch back to parent window
     # Then user select the created test Suite folder
      And user clicks on "VZW-Ch11-FOTA-WIFI-ON" test set
      Then user selects the "PlayButton" button
@@ -128,12 +130,14 @@ Scenario: MB_Regression_LWM2M-002- VZW-Ch11-FOTA-WIFI-ON
      Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button
       Then user validates the "11.17 FOTA Update - Mission Critical Devices Wifi On" test results for "VZ_TC_LWM2MOTADM" test case
-      Then user closes the current window 
+   #   Then user closes the current window 
  
   @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA :SU_During_RegistrationAndRegistrationUpdate_11_18
     
-     Given user switch back to parent window
+      Given user closes the current window
+    Then user switch back to parent window
+   #  Given user switch back to parent window
      And user clicks on "VZW-Ch11-FOTA" test set
      Then user selects the "PlayButton" button
      Then user is navigated to the "VZW-Ch11-FOTA" testSet Page   
@@ -149,12 +153,14 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA :SU_During_RegistrationAndRegi
      Then user selects the "Submit" button      
      Then user wait for "6" minutes
      Then user validates the "11.18 SU during Registration And RegistrationUpdate" test results for "VZ_TC_LWM2MOTADM" test case
-     Then user closes the current window 
+   #  Then user closes the current window 
 
   @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA :SU_During_RegistrationAndRegistrationUpdate_11_18_2
     
-     Given user switch back to parent window
+     Given user closes the current window
+    Then user switch back to parent window
+  #   Given user switch back to parent window
      #Then user select the created test Suite folder
      And user clicks on "VZW-Ch11-FOTA" test set
      Then user selects the "PlayButton" button
@@ -171,12 +177,14 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA :SU_During_RegistrationAndRegi
      Then user selects the "Submit" button      
      Then user wait for some time
      Then user validates the "11.18_2 SU during Registration And RegistrationUpdate" test results for "VZ_TC_LWM2MOTADM" test case
-     Then user closes the current window 
+  #   Then user closes the current window 
      
 @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA 
     
-     Given user switch back to parent window
+     Given user closes the current window
+    Then user switch back to parent window
+   #  Given user switch back to parent window
    #  Then user select the created test Suite folder
      And user clicks on "VZW-Ch11-FOTA" test set
      Then user selects the "PlayButton" button
@@ -196,12 +204,14 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA
       Then user wait for some times
       #Then user wait for job to complete "11.14 New Registration"
       Then user validates the "11.14 New Registration" test results for "VZ_TC_LWM2MOTADM" test case
-      Then user closes the current window 
+     # Then user closes the current window 
   
  @MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA :DownloadAndUpdate_MultipleFirmwares_11_15
     
-     Given user switch back to parent window
+     Given user closes the current window
+    Then user switch back to parent window
+   #  Given user switch back to parent window
      And user clicks on "VZW-Ch11-FOTA" test set
      Then user selects the "PlayButton" button
      Then user is navigated to the "VZW-Ch11-FOTA" testSet Page   
@@ -212,17 +222,20 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA :DownloadAndUpdate_MultipleFir
      Then user selects the "Generic_LWM2M_Generic_Device_2.2_2.4" button
       Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button
+     Then user wait for "5" seconds
       Then user selects the "Generic_LWM2M_Generic_Device_2.4_2.6" button
       Then user scroll to the right to "Submit" button
       Then user selects the "Submit" button
       Then user wait for some time
     # Then user wait for job to complete "11.15 Multiple Updates"
       Then user validates the "11.15 Multiple Updates" test results for "Firmware operation failed. Please contact Motive Support Team" error message
-      Then user closes the current window 
+    #  Then user closes the current window 
     
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
 
-    Given user Click on log off for the logged in user
+     Given user closes the current window
+    Then user switch back to parent window
+    Then user Click on log off for the logged in user
     Then user closes the simulator in port "5545"
     

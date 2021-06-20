@@ -581,7 +581,7 @@ public class Stepdef_CommonSteps extends WEB_Methods {
 	@Step
 	public void playButton(String buttonToClick) throws Exception {
  
-       
+		Report_getscreenShot("Current Page Screenshot");
 		WEB_click(WEB_Methods.WEB_findElement("XPATH",buttonToClick));
 		
 		}

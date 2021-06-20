@@ -1,5 +1,5 @@
 @SanityCasesomadm @test
-Feature: Motive Bridge DM Sanity cases  001-004
+Feature: Motive Bridge OMADM Sanity cases  001-004
 
 @MotiveBridge001g
 Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
@@ -68,6 +68,7 @@ Scenario: Single-Auto & VZW_GENERIC_AUTO
 	Then user selects the "Play" button 
 	Then user runs the simulator "OMADM" 
 	# Then user wait for some time
+	Then user wait for "2" seconds
 	Then user validates the "[3.2] Verify DMAcc Subtree" test results for "Auto" test case 
 	Then user closes the current window 
 	Then user closes the simulator in port "5546" 
@@ -93,12 +94,12 @@ Scenario:  MB_Regression_OMADM-005 :VZW_GENERIC_UAT
    And user clicks on "VZW_GENERIC_UAT" test set
   Then user selects the "PlayButton" button
    Then user is navigated to the "VZW_GENERIC_UAT" testSet Page 
-    Then user select the "ScriptCommands" folders for test case "ScriptCommandsNI"
+   Then user select the "ScriptCommands" folders for test case "ScriptCommandsNI"
    Then user selects the "Play" button
    Then user enters the resource as "GET ./DevDetail/FwV"
-    Then user selects the "Submit" button
+   Then user selects the "Submit" button
    Then user runs the simulator "OMADM"
-  # Then user wait for some time
+   Then user wait for some time
    Then user validates the "ScriptCommandsNI" test results for "UAT" test case
     Then user closes the simulator in port "5546"
     

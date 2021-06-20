@@ -1,5 +1,5 @@
-@SanityCasessc  @test
-Feature: Motive Bridge DM Sanity cases  001-004 
+@DCSanityCases  @test 
+Feature: Motive Bridge DC Sanity cases  
 
 @MotiveBridge001 
 Scenario: MB_Sanity_DC_Upgrade-001- Motive Bridge Log In Page 
@@ -54,7 +54,7 @@ Scenario: MB_Sanity_DC_Upgrade-003- LWM2M Create Device in Bootstrap mode
 	
 	
 @MotiveBridge019 
-Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal 
+Scenario: MB_Sanity_DC_Upgrade-004-Adding test subscriptions for Lwm2m test cases 
 
 	Given user switch back to parent window 
 	Then user selects the "ActiveIcon" button 
@@ -71,7 +71,7 @@ Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
 	
 	
 @MotiveBridge019 
-Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal 
+Scenario: MB_Sanity_DC_Upgrade-004-VZW_Ch12_Observation_Tests 
 
 	Given user switch back to parent window 
 	And user runs the simulator "CPP"
@@ -107,7 +107,7 @@ Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal
 	#Then user closes the current window 
 	Then user closes the simulator in port "5546" 
 @MotiveBridge019 
-Scenario: MB_Sanity_DC_Upgrade-004-Creating Lwm2m device in Motive Bridge Portal 
+Scenario: MB_Sanity_DC_Upgrade-004-VZW-Ch02-Server-Parameters-LWM2M
   
      Given user closes the current window
     Then user switch back to parent window

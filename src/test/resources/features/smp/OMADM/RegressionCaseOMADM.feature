@@ -1,5 +1,5 @@
 @RegressionCasePart1OMADM @test
-Feature: Motive Bridge Regression Cases Part 01
+Feature: Motive Bridge Regression Cases for OMADM Part 01
 
 @MotiveBridge001
 Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
@@ -91,13 +91,14 @@ Scenario: MB_Regression_OMADM-008 & MB_Regression_OMADM-010
 	Then user select the "CheckDeviceReady" folders for test case "CheckDeviceReady" 
 	Then user selects the "Play" button 
 	Then user runs the simulator "OMADM" 
-	# Then user wait for some time
+	Then user wait for "5" seconds
 	Then user validates the "CheckDeviceReady" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
 	#MB_Regression_OMADM-010 : Single-Auto-VerifyDevInfoSubtree-[3.4] Verify DevInfo Subtree
 	Then user select the "VerifyDevInfoSubtree" folders for test case "[3.4] Verify DevInfo Subtree" 
 	Then user selects the "Play" button 
 	Then user runs the simulator "OMADM" 
+	Then user wait for "5" seconds
 	Then user validates the "[3.4] Verify DevInfo Subtree" test results for "Auto" test case 
 	#Then user closes the current window 
 	Then user closes the simulator in port "5546" 
@@ -115,6 +116,7 @@ Given user closes the current window
 	Then user select the "CheckDeviceReady" folders for test case "CheckDeviceReady"
 	Then user selects the "Play" button 
 	Then user runs the simulator "OMADM" 
+	Then user wait for "5" seconds
 	Then user validates the "CheckDeviceReady" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
 	# NOT READY : MB_Regression_OMADM-012 : VZW_GENERIC_AUTO-AutoMismatchClientPwd-2.1.1_2.1.4_ClientAuthentication_ClientPasswordMismatch
@@ -128,12 +130,14 @@ Given user closes the current window
 	Then user select the "VerifyDMAccSubtree" folders for test case "[3.2] Verify DMAcc Subtree"
 	Then user selects the "Play" button
 	Then user runs the simulator "OMADM"
+	Then user wait for "5" seconds
 	Then user validates the "[3.2] Verify DMAcc Subtree" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
 	#MB_Regression_OMADM-014: VZW_GENERIC_AUTO-VerifyVoLTESubtree-[5.1] Verify VoLTE Subtree
 	Then user select the "VerifyVoLTESubtree" folders for test case "[5.1] Verify VoLTE Subtree"
 	Then user selects the "Play" button 
 	Then user runs the simulator "OMADM"
+	Then user wait for "5" seconds
 	Then user validates the "[5.1] Verify VoLTE Subtree" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
 	#Then user closes the current window 
@@ -150,6 +154,7 @@ Scenario: VZW_LTEFIELDOA_IOT_AUTO : MB_Regression_OMADM-015
 	Then user select the "_0109_AUTHENTICATION_SECURITY_KEY_MIS_MATCH_VZ_TC_LTEFIELDOA_8541" folders for test case "Authentication Security Mismatch"
 	Then user selects the "Play" button
 	Then user runs the simulator "OMADM"
+	Then user wait for "5" seconds
 	Then user validates the "Authentication Security Mismatch" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
 	#MB_Regression_OMADM-016: VZW_LTEFIELDOA_IOT_AUTO-01_VERIFY_LTE_CONNMO_DM_TREES_VZW_TC_LTEFIELDOA_8540 - [4.1] Verify ConnMo_LTE Subtree
@@ -158,6 +163,7 @@ Scenario: VZW_LTEFIELDOA_IOT_AUTO : MB_Regression_OMADM-015
 	Then user runs the simulator "OMADM"
 	Then user closes the simulator in port "5546" 
 	Then user checks the "- 1.- Execute TestModule GetIMSDetails"
+	Then user wait for "5" seconds
 	Then user validates the "[4.1] Verify ConnMo_LTE Subtree" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
 	#Then user closes the current window 

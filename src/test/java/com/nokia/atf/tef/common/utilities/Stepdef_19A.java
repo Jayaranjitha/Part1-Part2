@@ -588,6 +588,7 @@ public class Stepdef_19A extends WEB_Methods {
 			  
 				 }
 				 
+				 Report_getscreenShot("Validation Page Screenshot");
 				
 				  // Assert.assertEquals(true, tag.contains(driver.findElement(By.xpath("//td[contains(text(),'"+tag+"')]")).getText()));
 				   Assert.assertEquals("Test case link", testcaseLink, driver.findElement(By.xpath("(//a[contains(@class,'test-case-link')])[1]")).getText());
@@ -1586,6 +1587,7 @@ public class Stepdef_19A extends WEB_Methods {
     @Step
     public void deleteFirmware(String imageName) throws Exception {
     	
+    	Report_getscreenShot("Current Page");
     	if(driver.findElements(By.xpath("//input[contains(@value,'"+imageName+"')]")).size()==1){
     	driver.findElement(By.xpath("//input[contains(@value,'"+imageName+"')]")).click();
     	}
