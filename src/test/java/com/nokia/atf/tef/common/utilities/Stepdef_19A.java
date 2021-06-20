@@ -1036,6 +1036,7 @@ public class Stepdef_19A extends WEB_Methods {
 		@Step
 		public void selectFolders(String testCase,String testCaseName) throws Exception {
 
+			 Thread.sleep(2000);
  			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='jstree-anchor  jstree-disabled'][contains(@id,'anchor')][contains(.,'"+testCase+"')]")));
  			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='jstree-anchor  jstree-disabled'][contains(@id,'anchor')][text()='"+testCase+"']")));
 

@@ -1,4 +1,4 @@
-@RegressionCasePart1OMADM
+@RegressionCasePart1OMADM @test
 Feature: Motive Bridge Regression Cases Part 01
 
 @MotiveBridge001
@@ -147,7 +147,7 @@ Scenario: VZW_LTEFIELDOA_IOT_AUTO : MB_Regression_OMADM-015
 	Then user clicks on the "AutomatedPlayButton"
 	Then user is navigated to the "VZW_LTEFIELDOA_IOT_AUTO" testSet Page
     #MB_Regression_OMADM-015: VZW_LTEFIELDOA_IOT_AUTO-_0109_AUTHENTICATION_SECURITY_KEY_MIS_MATCH_VZ_TC_LTEFIELDOA_8541 - Authentication Security Mismatch
-	Then user select the "0109_AUTHENTICATION_SECURITY_KEY_MIS_MATCH_VZ_TC_LTEFIELDOA_8541" folders for test case "Authentication Security Mismatch"
+	Then user select the "_0109_AUTHENTICATION_SECURITY_KEY_MIS_MATCH_VZ_TC_LTEFIELDOA_8541" folders for test case "Authentication Security Mismatch"
 	Then user selects the "Play" button
 	Then user runs the simulator "OMADM"
 	Then user validates the "Authentication Security Mismatch" test results for "Auto" test case 

@@ -1,4 +1,4 @@
-@RegressionLwm2mPart1
+@RegressionLwm2mPart1 @test
 Feature: Motive Bridge DM Sanity cases  001-004
 
 @MotiveBridge001
