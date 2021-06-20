@@ -137,7 +137,7 @@ Given user closes the current window
 	Then user select the "VerifyVoLTESubtree" folders for test case "[5.1] Verify VoLTE Subtree"
 	Then user selects the "Play" button 
 	Then user runs the simulator "OMADM"
-	Then user wait for "5" seconds
+	Then user wait for "8" seconds
 	Then user validates the "[5.1] Verify VoLTE Subtree" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
 	#Then user closes the current window 
@@ -154,7 +154,7 @@ Scenario: VZW_LTEFIELDOA_IOT_AUTO : MB_Regression_OMADM-015
 	Then user select the "_0109_AUTHENTICATION_SECURITY_KEY_MIS_MATCH_VZ_TC_LTEFIELDOA_8541" folders for test case "Authentication Security Mismatch"
 	Then user selects the "Play" button
 	Then user runs the simulator "OMADM"
-	Then user wait for "5" seconds
+	Then user wait for "2" minutes
 	Then user validates the "Authentication Security Mismatch" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
 	#MB_Regression_OMADM-016: VZW_LTEFIELDOA_IOT_AUTO-01_VERIFY_LTE_CONNMO_DM_TREES_VZW_TC_LTEFIELDOA_8540 - [4.1] Verify ConnMo_LTE Subtree

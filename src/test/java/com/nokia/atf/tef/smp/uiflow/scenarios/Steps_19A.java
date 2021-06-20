@@ -493,6 +493,7 @@ public class Steps_19A extends WEB_Methods {
 	@Then("^user wait for some times$")
 	public void user_waits() throws Exception {
 		Thread.sleep(3 * 60 * 1000);
+		Report_getscreenShot("Current Page");
 	}
 	
 	@Then("^user wait for \\\"([^\\\"]*)\\\" minutes$")

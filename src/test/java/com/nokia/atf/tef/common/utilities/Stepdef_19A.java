@@ -520,7 +520,7 @@ public class Stepdef_19A extends WEB_Methods {
 					driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				}
 				
-				   wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[contains(.,'Test Results')]")));
+				  // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[contains(.,'Test Results')]")));
 				 if(driver.findElements(By.xpath("//span[contains(.,'Passed')]")).size()>=1){
 				   Assert.assertEquals("Test case Status","Passed", driver.findElement(By.xpath("//span[contains(.,'Passed')]")).getText());
 				   Thread.sleep(1000);
