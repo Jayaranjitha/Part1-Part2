@@ -67,6 +67,7 @@ Scenario: MB_Sanity_DC_Upgrade-004-Adding test subscriptions for Lwm2m test case
 		|VZW_Ch12_Observation_Tests|
 		|VZW-Ch02-Server-Parameters-LWM2M|
 		|VZW-Chapter03Cases|  
+		|VZW-Ch11-FOTA|
 	And user verifies the test suite created 
 	
 	
@@ -129,14 +130,41 @@ Scenario: MB_Sanity_DC_Upgrade-004-VZW-Ch02-Server-Parameters-LWM2M
 	And user hits the action "AddObjectLWM2M-Server-/1/3" from the Impact
 	Then user wait for some time
 	Then user validates the "2.14 Notification Storing When Disabled or Offline (Repository server)" test results for "VZ_TC_LWM2MOTADM" test case 	
-#	Then user closes the current window 
-
+    Then user closes the simulator in port "5546" 
+ 
+ @MotiveBridge019
+Scenario: MB_Sanity_DC_Upgrade-004- VZW-Ch11-FOTA 
+    
+     Given user closes the current window
+    Then user switch back to parent window
+     And user clicks on "VZW-Ch11-FOTA" test set
+     Then user selects the "PlayButton" button
+     Then user is navigated to the "VZW-Ch11-FOTA" testSet Page
+     And user runs the simulator "CPP"
+     Then user select the "DownloadAndUpdate" folders for test case "11.01 Firmware Update (In-Band)"
+     Then user selects the "Play" button
+     And user runs the simulator "LWM2M"
+     Then user select the "CONTINUE" from status to start the test
+      Then user scroll to the right to "Submit" button
+     Then user selects the "Submit" button     
+     Then user selects the "CheckJobStatus" button
+     Then user wait for some time
+     Then user selects the "CheckJobStatus" button
+     Then user wait for some time
+     Then user selects the "Refresh" button
+     Then user wait for some time
+     Then user selects the "Refresh" button
+     Then user verifies the job details  
+      Then user scroll to the right to "Submit" button
+     Then user selects the "Submit" button
+     Then user wait for some time
+     Then user validates the "11.01 Firmware Update (In-Band)" test results for "VZ_TC_LWM2MOTADM" test case
+     Then user closes the simulator in port "5545"
 	
 @MotiveBridge019 
 Scenario: Logout from Motive Bridge 
     Given user closes the current window
     Then user switch back to parent window
 	And user Click on log off for the logged in user 
-	Then user closes the simulator in port "5545" 
 	Then user closes the simulator in port "5546" 
     

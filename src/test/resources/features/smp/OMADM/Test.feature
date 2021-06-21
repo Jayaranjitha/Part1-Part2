@@ -20,6 +20,6 @@ Scenario: Sample Test
 		| Re-enter Email Address | someone@someone.com |1001| 1001|
 		| Password               | Password1           |1001| 1001|
 		| Birthdate              | 01                  |1001| 1001|
- Then user closes the simulator in port "5545"
+ Then user closes the simulator in port "5546"
  
  

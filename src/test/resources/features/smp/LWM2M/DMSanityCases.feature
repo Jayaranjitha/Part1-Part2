@@ -1,4 +1,4 @@
-@DMSanityCases @testjenkins
+@DMSanityCases @testjenkins @testprod
 Feature: Motive Bridge DM Sanity cases  001-004
 
 @MotiveBridge019
@@ -137,61 +137,11 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch13-UAT-Special-Tests
     #Then user closes the current window 
     Then user closes the simulator in port "5545"
  
- @MotiveBridge019
-Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch11-FOTA 
-    
-     Given user closes the current window
-   Then user switch back to parent window
-    # Given user switch back to parent window
-     And user clicks on "VZW-Ch11-FOTA" test set
-     Then user selects the "PlayButton" button
-     Then user is navigated to the "VZW-Ch11-FOTA" testSet Page
-     Then user select the "DownloadAndUpdate" folders for test case "11.01 Firmware Update (In-Band)"
-     Then user selects the "Play" button
-     And user runs the simulator "LWM2M"
-     Then user select the "CONTINUE" from status to start the test
-      Then user scroll to the right to "Submit" button
-     Then user selects the "Submit" button     
-     Then user selects the "CheckJobStatus" button
-     Then user wait for some time
-     Then user selects the "CheckJobStatus" button
-     Then user wait for some time
-     Then user selects the "Refresh" button
-     Then user wait for some time
-     Then user selects the "Refresh" button
-     Then user verifies the job details  
-      Then user scroll to the right to "Submit" button
-     Then user selects the "Submit" button
-     Then user wait for some time
-     Then user validates the "11.01 Firmware Update (In-Band)" test results for "VZ_TC_LWM2MOTADM" test case
-     Then user closes the simulator in port "5545"
-    Then user select the "DownloadAndUpdate_OOB" folders for test case "11.02 Firmware Update (Out-Band)"
-    Then user selects the "Play" button
-     And user runs the simulator "LWM2M"
-    Then user select the "CONTINUE" from status to start the test
-     Then user scroll to the right to "Submit" button
-     Then user selects the "Submit" button   
-      Then user selects the "CheckJobStatus" button
-     Then user wait for some time
-     Then user selects the "CheckJobStatus" button
-     Then user wait for some time
-     Then user selects the "Refresh" button
-     Then user wait for some time
-     Then user selects the "Refresh" button  
-     Then user verifies the job details  
-      Then user scroll to the right to "Submit" button
-     Then user selects the "Submit" button
-     Then user wait for some time
-      Then user validates the "11.02 Firmware Update (Out-Band)" test results for "VZ_TC_LWM2MOTADM" test case
-     Then user closes the simulator in port "5545"
-   
-
- 
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
 
- Given user closes the current window
+     Given user closes the current window
     Then user switch back to parent window
-    Given user Click on log off for the logged in user
-    Then user closes the simulator in port "5545"
+    Then user Click on log off for the logged in user
+    Then user closes the simulator in port "5546"
     

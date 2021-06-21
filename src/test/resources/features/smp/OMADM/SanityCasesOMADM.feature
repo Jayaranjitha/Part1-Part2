@@ -1,4 +1,4 @@
-@SanityCasesomadm @test @testomadm @testlocal
+@SanityCasesomadm @test @testomadm @testlocal @testprodomadm
 Feature: Motive Bridge OMADM Sanity cases  001-004
 
 @MotiveBridge001g

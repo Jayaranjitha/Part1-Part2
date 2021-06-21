@@ -531,7 +531,7 @@ public class Stepdef_19A extends WEB_Methods {
 				 
 				 if(driver.findElements(By.xpath("//span[contains(.,'Failed')]")).size()>=1){
 					 
-				logger.info("Test case is failed. Please look into logs for more details" +driver.findElement(By.xpath("//div[contains(@class,'test-case-error-message')]")).getText());
+				logger.error("Test case is failed. Please look into logs for more details" +driver.findElement(By.xpath("//div[contains(@class,'test-case-error-message')]")).getText());
 						  
 				 }	
 				 Report_getscreenShot("Validation Page");
@@ -2101,7 +2101,7 @@ public class Stepdef_19A extends WEB_Methods {
 
        try {
     	   
-    	 //  CommonSteps.lwm2miccid= "918889996412332";
+    	 // CommonSteps.lwm2miccid= "918889996412332";
 		  PropertyDemo.createPropertyFile(CommonSteps.lwm2miccid);
 		  
 		 // CommonSteps.closeSimulator("5546");
