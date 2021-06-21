@@ -70,7 +70,7 @@ Scenario: MB_Regression_LWM2M-002- VZW-Ch11-FOTA-WIFI-ON
      And user clicks on "VZW-Ch11-FOTA-WIFI-ON" test set
      Then user selects the "PlayButton" button
      Then user is navigated to the "VZW-Ch11-FOTA-WIFI-ON" testSet Page  
-    Then user select the "Firmware_Update_OB_11_02_Wifi_On" folders for test case "11.02 Firmware Update (Out-Band)"
+    Then user select the "Firmware_Update_OB_11_02_Wifi_On" folders for test case " 11.02 Firmware Update (Out-Band) Wifi On"
      And user runs the simulator "LWM2M"
      Then user selects the "Play" button    
      Then user select the "CONTINUE" from status to start the test
@@ -87,7 +87,7 @@ Scenario: MB_Regression_LWM2M-002- VZW-Ch11-FOTA-WIFI-ON
      Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button
      Then user wait for some time
-     Then user validates the "11.02 Firmware Update (Out-Band)" test results for "VZ_TC_LWM2MOTADM" test case
+     Then user validates the " 11.02 Firmware Update (Out-Band) Wifi On" test results for "VZ_TC_LWM2MOTADM" test case
      Then user closes the simulator in port "5545"
      Then user select the "Device_Power_Off_During_FW_Download_OB_11_03_Wifi_On" folders for test case "11.03 Device powers off during FW Download OB Wifi On"    
       And user runs the simulator "LWM2M"

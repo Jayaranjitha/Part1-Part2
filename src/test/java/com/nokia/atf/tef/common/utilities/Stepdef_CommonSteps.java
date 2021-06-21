@@ -918,7 +918,7 @@ public static String jsonData(String jsonFileName) throws Exception {
 
 	public void userSwitchParentWindow() throws Exception {
 
-		logger.info("Session id of parentwindow" +parentWindow);
+	    	logger.info("Session id of parentwindow" +parentWindow);
 		  driver.switchTo().window(parentWindow);
 		  Thread.sleep(2000);
 	}
