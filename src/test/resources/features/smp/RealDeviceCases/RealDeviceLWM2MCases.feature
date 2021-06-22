@@ -102,15 +102,15 @@ Scenario: VZW-Chapter11Cases: 11.10 FW Delivery Method  : Manual Intervention is
  @MotiveBridge019 
 Scenario: MB_Regression_LWM2M-019-VZW-Chapter04Cases
 
-        Given user closes the current window
+     Given user closes the current window
     Then user switch back to parent window 
-     And user clicks on "VZW-Chapter04Cases" test set 
+    And user clicks on "VZW-Chapter04Cases" test set 
 	Then user clicks on the "AutomatedPlayButton"
 	Then user is navigated to the "VZW-Chapter04Cases" testSet Page 
 	Then user select the "ICCID_4_33" folders for test case "4.33 ICCID" 
 	Then user selects the "Play" button
 	Then user validates the "4.33 ICCID" test results for "VZ_TC_LWM2MOTADM" test case
-	Then user closes the current window   
+	
 	
 	@MotiveBridge019 
 Scenario: MB_Regression_LWM2M-019-VZW-Chapter08Cases
@@ -136,11 +136,12 @@ Scenario: MB_Regression_LWM2M-019-VZW-Chapter08Cases
 	Then user selects the "Play" button
 	Then user wait for "6" seconds
 	Then user validates the "8.06 Average Message Size" test results for "VZ_TC_LWM2MOTADM" test case
-	Then user closes the current window   
 	
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
-
+    
+     Given user closes the current window
+    Then user switch back to parent window 
     Given user clicks logout for "REAL device User"
     
     
