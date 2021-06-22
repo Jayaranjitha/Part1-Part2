@@ -1,4 +1,4 @@
-@DMSanityCases @testjenkins @testprod
+@DMSanityCases @testjenkins @testprod @Part2DM
 Feature: Motive Bridge DM Sanity cases  001-004
 
 @MotiveBridge019
