@@ -1,12 +1,14 @@
 @DCSanityCases  @testlocal @real1 @realdevice1
 Feature: Motive Bridge DC Sanity cases  
 
-@MotiveBridge001 
-Scenario: MB_Sanity_DC_Upgrade-001- Motive Bridge Log In Page 
-
+@MotiveBridge001
+Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
+  
 	Given user is already on Login Page 
-	Then user enters user name and password 
-	And user clicks on login button 
+	#Then user enters username as "nokiamhlab_admin@motive.com" and password as "motiveAdmin@123" for realDevice testing
+	Then user enters username and password for realDevice testing
+	And user clicks on login button
+
 	
 @MotiveBridge019 
 Scenario: MB_Sanity_DC_Upgrade-001-Motive Bridge UI validation 

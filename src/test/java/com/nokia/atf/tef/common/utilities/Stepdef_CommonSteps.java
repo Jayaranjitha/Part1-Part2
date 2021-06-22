@@ -659,7 +659,7 @@ public class Stepdef_CommonSteps extends WEB_Methods {
     //MB
 	@Step
 	public void user_scroll_right(String element) throws Exception {
-		
+		Thread.sleep(1000);
 		WEB_Methods.ScrollHorizontally(element);
 	}
 	
