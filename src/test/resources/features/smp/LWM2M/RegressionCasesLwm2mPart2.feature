@@ -98,16 +98,16 @@ Scenario: MB_Sanity_DC_Upgrade-004-VZW-Ch02-Server-Parameters-LWM2M
     Then user select the "ReadAndWriteServerNodes2_08" folders for test case "2.08 Registration Update (DM server)" 
     And user runs the simulator "LWM2M"
 	Then user selects the "Play" button 	
-	 Then user select the "CONTINUE" from status to start the test
+	 Then user select the "PASS" from status to start the test
 	 And user runs the simulator "LWM2M"	
      Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button 
-     Then user wait for "10" seconds
-      Then user select the "CONTINUE" from status to start the test
-       And user runs the simulator "LWM2M"	
-     Then user scroll to the right to "Submit" button
-     Then user selects the "Submit" button 
-     Then user wait for "10" seconds
+     Then user wait for "20" seconds
+    #  Then user select the "CONTINUE" from status to start the test
+     #  And user runs the simulator "LWM2M"	
+     #Then user scroll to the right to "Submit" button
+     #Then user selects the "Submit" button 
+   #  Then user wait for "10" seconds
      Then user validates the "2.08 Registration Update (DM server)" test results for "VZ_TC_LWM2MOTADM" test case
 	 
 	  
