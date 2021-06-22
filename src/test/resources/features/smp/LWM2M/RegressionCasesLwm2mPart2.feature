@@ -1,4 +1,4 @@
-@RegressionLwm2mPart2 @test @testjenkins
+@RegressionLwm2mPart2 @test @testjenkins @Part2DM
 Feature: Motive Bridge LWM2M Regression Cases
 
 @MotiveBridge001
