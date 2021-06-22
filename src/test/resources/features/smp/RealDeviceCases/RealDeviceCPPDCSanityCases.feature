@@ -80,8 +80,7 @@ Scenario: MB_Sanity_DC_Upgrade-004-VZW-Ch02-Server-Parameters-LWM2M
 	Then user selects the "Play" button 	
 	Then user wait for some time
 	Then user validates the "2.06 Notification Storing When Disabled or Offline (DM server)" test results for "VZ_TC_LWM2MOTADM" test case 
-    Then user select the "ReadAndWriteServerNodes2_14" folders for test case "2.14 Notification Storing When Disabled or Offline (Repository server)" 
-	And user runs the simulator "CPP" 
+    Then user select the "ReadAndWriteServerNodes2_14" folders for test case "2.14 Notification Storing When Disabled or Offline (Repository server)"
 	Then user selects the "Play" button 	
 	Then user wait for some time
 	Then user validates the "2.14 Notification Storing When Disabled or Offline (Repository server)" test results for "VZ_TC_LWM2MOTADM" test case 	
