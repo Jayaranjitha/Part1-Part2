@@ -1,4 +1,4 @@
-@RegressionCasePart1OMADM @test @testomadm @testlocal @testprodomadm
+@RegressionCasePartOMADM @test @testomadm @testlocal @testprodomadm1
 Feature: Motive Bridge Regression Cases for OMADM Part 01
 
 @MotiveBridge001
@@ -19,12 +19,12 @@ Scenario: OMADM Create Device in LTE mode
     Given user clicks on "Manage Devices"
     Then user clicks on "VERIZON - IOT" protocol
     Then user is navigated to the "OMADM" create device page  
-#    Then user select the "DeleteDevice" folders for test case "DeleteDeviceList"
-#    Then user selects the "Play" button
-#    Then user scroll to the right to "Search" button
-#    Then user enters the "DeviceID" in the "Search" button
-#    And validate the "DeviceID" is unique for "OMADM"
-#    And user selects the "STOP" button
+    Then user select the "DeleteDevice" folders for test case "DeleteDeviceList"
+    Then user selects the "Play" button
+    Then user scroll to the right to "Search" button
+    Then user enters the "DeviceID" in the "Search" button
+    And validate the "DeviceID" is unique for "OMADM"
+    And user selects the "STOP" button
     Then user select the "createDevice" folders for test case "createDeviceLTE"
     Then user scroll to the left to "Play" button
     Then user selects the "Play" button
@@ -116,7 +116,7 @@ Given user closes the current window
 	Then user select the "CheckDeviceReady" folders for test case "CheckDeviceReady"
 	Then user selects the "Play" button 
 	Then user runs the simulator "OMADM" 
-	Then user wait for "5" seconds
+	Then user wait for "3" seconds
 	Then user validates the "CheckDeviceReady" test results for "Auto" test case 
 	Then user closes the simulator in port "5546" 
 	# NOT READY : MB_Regression_OMADM-012 : VZW_GENERIC_AUTO-AutoMismatchClientPwd-2.1.1_2.1.4_ClientAuthentication_ClientPasswordMismatch
@@ -179,7 +179,7 @@ Scenario: OMADM Delete Device
     Then user selects the "Play" button
      Then user enters the "DeviceID" value
     Then user enters the "SubscriberID" value
-    Then user enters the "ICCID" value
+   # Then user enters the "ICCID" value
     Then user scroll to the right to "Submit" button
     Then user selects the "Submit" button
     Then user validates the "DeleteDevice" test results for "UAT" test case  

@@ -1,4 +1,4 @@
-@RegressionLwm2mPart1 @test @testjenkins
+@RegressionLwm2mPart3 @test @testjenkins
 Feature: Motive Bridge DM Regression Cases VZW-Chapter04Cases,Chapter07Cases &Chapter15Cases
 
 @MotiveBridge001

@@ -63,12 +63,12 @@ Scenario: VZW-Ch02-Server-Parameters-LWM2M
 	 Then user select the "ReadAndWriteServerNodes2_13" folders for test case "2.13 Disable Timeout (Repository server)"   
      Then user selects the "Play" button
      Then user wait for "3" seconds
-     Then user select the "CONTINUE" from status to start the test
+     Then user select the "PASS" from status to start the test
       Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button   
      Then user wait for "4" minutes
      Then user validates the "2.13 Disable Timeout (Repository server)" test results for "VZ_TC_LWM2MOTADM" test case
-     Then user closes the current window
+    # Then user closes the current window
      
  @MotiveBridge019
 Scenario: VZW-Chapter11Cases: 11.09 FW Update Protocol Support

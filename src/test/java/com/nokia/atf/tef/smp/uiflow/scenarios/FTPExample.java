@@ -148,8 +148,10 @@ public class FTPExample {
 	public void disconnect() {
 		System.out.println("disconnecting...");
 		//sftpChannel.disconnect();
+		if(!(channel==null && session==null)) {
 		channel.disconnect();
 		session.disconnect();
+		}
 		System.out.println("Disconnected Successfully");
 	}
 	

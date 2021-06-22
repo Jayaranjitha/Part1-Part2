@@ -518,7 +518,7 @@ public class Stepdef_19A extends WEB_Methods {
 		    	   Report_getscreenShot("Before Validation Page"+RandomStringUtils.randomAlphanumeric(8));
 				driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 				if(driver.findElements(By.xpath("//h6[contains(.,'Test Results')]")).size()<1) {
-					driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				}
 				
 				  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[contains(.,'Test Results')]")));
@@ -677,6 +677,7 @@ public class Stepdef_19A extends WEB_Methods {
 		@Step
 		public void selectFirmwareMakeModel(String modelMake) throws Exception{
 			Thread.sleep(1000);
+			driver.findElement(By.xpath("(//input[contains(@type,'search')])[1]")).sendKeys(modelMake);
 			logger.info("size of model" +driver.findElements(By.xpath("//input[@value='"+modelMake+"']")).size());
 			if(driver.findElements(By.xpath("//input[@value='"+modelMake+"']")).size()==1) {
 				driver.findElement(By.xpath("//input[@value='"+modelMake+"']")).click();
@@ -2116,10 +2117,10 @@ public class Stepdef_19A extends WEB_Methods {
 
        try {
     	   
-    	 // CommonSteps.lwm2miccid= "918889996412332";
+    //	  CommonSteps.lwm2miccid= "918889997613264";
 		  PropertyDemo.createPropertyFile(CommonSteps.lwm2miccid);
 		  
-		 // CommonSteps.closeSimulator("5546");
+		 CommonSteps.closeSimulator("5546");
 		  
 		  if(environment.equalsIgnoreCase("QA")) {
 		  String simPath= PropertyDemo.createBatFile("5546", tunnelLocalPORT);
