@@ -599,16 +599,8 @@ public class Stepdef_CommonSteps extends WEB_Methods {
 	public void playButton(String buttonToClick) throws Exception {
  
 		Report_getscreenShot("Current Page Screenshot"+RandomStringUtils.randomAlphanumeric(4));
-		
-		
-		if(environment.equalsIgnoreCase("QA")) {
-			WEB_click(WEB_Methods.WEB_findElement("XPATH",buttonToClick));
-		}
-		
-        if(environment.equalsIgnoreCase("PROD")) {
-			
-        	WEB_click(WEB_Methods.WEB_findElement("STRING","//td[contains(.,'Generic_2.4_2.6')]"));
-		}
+		WEB_click(WEB_Methods.WEB_findElement("XPATH",buttonToClick));
+	
 		
 		}
 	
