@@ -1,4 +1,4 @@
-@testx @test @testomadm @testjenkins @realdevice
+@testx @test @testomadm @testjenkins @realdevice @realdevice1
 Feature: Motive Bridge -Real device related LWM2M cases
 
 @MotiveBridge001
@@ -68,7 +68,7 @@ Scenario: VZW-Ch02-Server-Parameters-LWM2M
      Then user selects the "Submit" button   
      Then user wait for "2" minutes
      Then user validates the "2.13 Disable Timeout (Repository server)" test results for "VZ_TC_LWM2MOTADM" test case
-    # Then user closes the current window
+    
      
  @MotiveBridge019
 Scenario: VZW-Chapter11Cases: 11.09 FW Update Protocol Support

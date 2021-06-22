@@ -1,4 +1,4 @@
-@DCSanityCases  @testlocal @real1
+@DCSanityCases  @testlocal @real1 @realdevice1
 Feature: Motive Bridge DC Sanity cases  
 
 @MotiveBridge001 
