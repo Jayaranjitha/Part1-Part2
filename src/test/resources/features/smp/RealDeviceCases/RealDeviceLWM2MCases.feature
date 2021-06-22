@@ -1,11 +1,12 @@
-@testx @test @testomadm @testjenkins
+@testx @test @testomadm @testjenkins @thd
 Feature: Motive Bridge -Real device related LWM2M cases
 
 @MotiveBridge001
 Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
   
 	Given user is already on Login Page 
-	Then user enters username as "nokiamhlab_admin@motive.com" and password as "motiveAdmin@123" for realDevice testing
+	#Then user enters username as "nokiamhlab_admin@motive.com" and password as "motiveAdmin@123" for realDevice testing
+	Then user enters username and password for realDevice testing
 	And user clicks on login button
 
 
@@ -21,8 +22,9 @@ Scenario: MB_Sanity_DM_Upgrade-004-Adding test subscriptions for Lwm2m test case
     
    Given user runs the simulator "RealDevice"
    Then user switch back to parent window
+  # Then user creates a "AutomationRealDevice" main folder
    Then user selects the "ActiveIcon" button
-   Then user select the "VERIZON[LWM2M] - IOT" folder
+   Then user select the "AutomationRealDevice" folder
    Then user create a folder "Automation_Test"
    Then user clicks on "VERIZON[LWM2M] - IOT" folder
    Then user create a test suite for "Automation_Test" folder for "VERIZON[LWM2M]"
@@ -139,6 +141,6 @@ Scenario: MB_Regression_LWM2M-019-VZW-Chapter08Cases
 @MotiveBridge019
 Scenario: Logout from Motive Bridge
 
-    Given user clicks logout for "nokiamhlab_admin@motive.com"
+    Given user clicks logout for "REAL device User"
     
     

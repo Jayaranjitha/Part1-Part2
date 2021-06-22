@@ -1,5 +1,6 @@
 package com.nokia.atf.tef.smp.uiflow.scenarios;
 
+import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -154,6 +155,12 @@ public class Steps_19A extends WEB_Methods {
 	
 
 	
+	@Then("^user creates a \"([^\"]*)\" main folder$")
+	public void newFolderCreation(String newfolderName) throws Exception {
+	Operations.newFolderCreation(newfolderName);
+	
+	}
+	
 	@Then("^user select the \"([^\"]*)\" folders for test case \"([^\"]*)\"$")
 	public void verifyTexts(String folderName, String testCaseName) throws Exception {
 	Operations.selectFolders(folderName,testCaseName);
@@ -298,13 +305,13 @@ public class Steps_19A extends WEB_Methods {
 	@Then("^user validates the \"([^\"]*)\" test results for \"([^\"]*)\" test case$")
 	public void testCaseTestRsult(String button,String tag) throws Exception {
 		Operations.testCaseTestRsult(button,tag);
-		Report_getscreenShot("Test Case");
+		Report_getscreenShot("Test Case"+RandomStringUtils.randomAlphanumeric(4));
 	}
 	
 	@Then("^user validates the test results for \"([^\"]*)\" test case$")
 	public void testCaseRealDevice(String testcase) throws Exception {
 		Operations.testCaseRealDevice(testcase);
-		Report_getscreenShot("Test Case");
+		Report_getscreenShot("Test Case"+RandomStringUtils.randomAlphanumeric(4));
 	}
 	
 	

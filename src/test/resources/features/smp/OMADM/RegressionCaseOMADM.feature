@@ -19,12 +19,12 @@ Scenario: OMADM Create Device in LTE mode
     Given user clicks on "Manage Devices"
     Then user clicks on "VERIZON - IOT" protocol
     Then user is navigated to the "OMADM" create device page  
-    Then user select the "DeleteDevice" folders for test case "DeleteDeviceList"
-    Then user selects the "Play" button
-    Then user scroll to the right to "Search" button
-    Then user enters the "DeviceID" in the "Search" button
-    And validate the "DeviceID" is unique for "OMADM"
-    And user selects the "STOP" button
+#    Then user select the "DeleteDevice" folders for test case "DeleteDeviceList"
+#    Then user selects the "Play" button
+#    Then user scroll to the right to "Search" button
+#    Then user enters the "DeviceID" in the "Search" button
+#    And validate the "DeviceID" is unique for "OMADM"
+#    And user selects the "STOP" button
     Then user select the "createDevice" folders for test case "createDeviceLTE"
     Then user scroll to the left to "Play" button
     Then user selects the "Play" button

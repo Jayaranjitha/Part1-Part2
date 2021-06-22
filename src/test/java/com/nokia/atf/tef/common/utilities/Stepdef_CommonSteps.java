@@ -82,6 +82,12 @@ public class Stepdef_CommonSteps extends WEB_Methods {
 	@Value("${smp.nbi.uiworkflow.dbpassword}")
 	private String PASS;
 	
+	@Value("${smp.nbi.uiworkflow.realDeviceApplUSR}")
+	private String realDeviceApplUSR;
+	
+	@Value("${smp.nbi.uiworkflow.realDeviceApplPass}")
+	private String realDeviceApplPass;
+	
 	private Scenario scenario;
 	private static Connection conn = null;
 	private static Statement stmt = null;
@@ -200,13 +206,24 @@ public class Stepdef_CommonSteps extends WEB_Methods {
 		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "UserName_textbox"), smpUsername);
 		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "Password_textbox"), smpPassword);
 	}
+//	@Step
+//	public void user_enters_usernamePasswordForRealDevice(String username, String password) throws Exception {
+//
+//		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "UserName_textbox"), username);
+//		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "Password_textbox"), password);
+//		
+//		
+//	}
+	
 	@Step
-	public void user_enters_usernamePasswordForRealDevice(String username, String password) throws Exception {
+	public void user_enters_usernamePasswordForRealDevice() throws Exception {
 
-		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "UserName_textbox"), username);
-		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "Password_textbox"), password);
+		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "UserName_textbox"), realDeviceApplUSR);
+		WEB_SendKeys(WEB_Methods.WEB_findElement("ID", "Password_textbox"), realDeviceApplPass);
+		
 		
 	}
+	
 	
 	
 	
@@ -581,7 +598,7 @@ public class Stepdef_CommonSteps extends WEB_Methods {
 	@Step
 	public void playButton(String buttonToClick) throws Exception {
  
-		Report_getscreenShot("Current Page Screenshot");
+		Report_getscreenShot("Current Page Screenshot"+RandomStringUtils.randomAlphanumeric(4));
 		WEB_click(WEB_Methods.WEB_findElement("XPATH",buttonToClick));
 		
 		}
@@ -697,9 +714,9 @@ public class Stepdef_CommonSteps extends WEB_Methods {
 	
 		 driver.switchTo().window(parentWindow);
 	        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);	
-	        logger.info("smpusername is" +user);
+	        logger.info("smpusername is" +realDeviceApplUSR);
 	        WEB_click(WEB_findElement("STRING",
-					"//span[contains(.,'"+user+"')]"));
+					"//span[contains(.,'"+realDeviceApplUSR+"')]"));
 
 			WEB_click(WEB_findElement("STRING", "//a[contains(.,'Logout')]"));
 			logger.info("User Logged off successfully");

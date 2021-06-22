@@ -1,4 +1,4 @@
-@RegressionLwm2mPart4 @test @testjenkins
+@RegressionLwm2mPart4 @qatest @prodtest 
 Feature: Motive Bridge DM Regression Cases VZW-Chapter04Cases,Chapter07Cases &Chapter15Cases
 
 @MotiveBridge001
@@ -8,13 +8,13 @@ Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
 	Then user enters user name and password
 	And user clicks on login button
 
-@MotiveBridge019
+ 
 Scenario: MB_Sanity_DM_Upgrade-001-Motive Bridge UI validation
 	Given user verifies the "Manage_Firmware" button
 	Then user verifies the "Manage_Devices" button
 	Then user verifies the "Quick_Run" button 
 
-@MotiveBridge019
+ 
 Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
 
     Given user clicks on "Manage Devices"
@@ -29,7 +29,6 @@ Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
     And user selects the "STOP" button
     And user runs the simulator "LWM2M"
      Then user select the "LWM2MCreateDevice" folders for test case "Create Device Bootstrap"
-   # Then user clicks on "Create Device Bootstrap" button
     Then user scroll to the left to "Play" button
     Then user selects the "Play" button
     Then user scrolls down the page
@@ -41,7 +40,7 @@ Scenario: MB_Sanity_DM_Upgrade-003- LWM2M Create Device in Bootstrap mode
     Then user validates the "Create Device Bootstrap" test results
    Then user closes the current window
    
-@MotiveBridge019 
+  
 Scenario: MB_Sanity_DC_Upgrade-004-Adding test subscriptions for Lwm2m test cases
 
 	Given user switch back to parent window 
@@ -57,7 +56,7 @@ Scenario: MB_Sanity_DC_Upgrade-004-Adding test subscriptions for Lwm2m test case
            |VZW_Ch16_NB-IoT|
 	And user verifies the test suite created 
 	
- @MotiveBridge019 
+   
 Scenario: MB_Regression_LWM2M-LWM2M_GENERIC_UAT_MISC
 
     Given user switch back to parent window 
@@ -87,7 +86,7 @@ Scenario: MB_Regression_LWM2M-LWM2M_GENERIC_UAT_MISC
     
 	
  
-  @MotiveBridge019 
+    
 Scenario: MB_Regression_LWM2M-VZW_Ch14-HostDevice
    
      Given user closes the current window 
@@ -100,33 +99,33 @@ Scenario: MB_Regression_LWM2M-VZW_Ch14-HostDevice
 	 Then user validates the "OTADMLWM2M_41102 Host device info" test results for "VZ_TC_LWM2MOTADM" test case 
 
 
-@MotiveBridge019 
+  
 Scenario: MB_Regression_LWM2M-VZW_Ch16_NB-IoT
 
      Given user closes the current window 
      Then user switch back to parent window 
-    #Then user select the created test Suite folder 
+#    Then user select the created test Suite folder 
     And user clicks on "VZW_Ch16_NB-IoT" test set 
 	Then user selects the "PlayButton" button 
 	Then user is navigated to the "VZW_Ch16_NB-IoT" testSet Page 
 	Then user select the "NB_IoT_16_1" folders for test case "16.1 NB-IoT" 
 	Then user selects the "Play" button
-	 Then user select the "CONTINUE" from status to start the test
+	 Then user select the "Continue" from status to start the test
      Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button 
-     Then user select the "CONTINUE" from status to start the test
+     Then user select the "Continue" from status to start the test
      Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button 
-     Then user select the "CONTINUE" from status to start the test
+     Then user select the "Continue" from status to start the test
      Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button 
-     Then user select the "CONTINUE" from status to start the test
+     Then user select the "Continue" from status to start the test
      Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button 
 	 Then user validates the "16.1 NB-IoT" test results for "VZ_TC_LWM2MOTADM" test case 
        
 
-@MotiveBridge019
+ 
 Scenario: Logout from Motive Bridge
 
       Given user closes the current window 

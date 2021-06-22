@@ -83,12 +83,17 @@ public class CommonSteps extends WEB_Methods {
 
 	}
 	
-	@Then("user enters username as \"([^\"]*)\" and password as \"([^\"]*)\" for realDevice testing$")
-	public void user_enters_usernamePasswordForRealDevice(String username, String password) throws Exception {
-		CommonSteps.user_enters_usernamePasswordForRealDevice(username, password);
+//	@Then("user enters username as \"([^\"]*)\" and password as \"([^\"]*)\" for realDevice testing$")
+//	public void user_enters_usernamePasswordForRealDevice(String username, String password) throws Exception {
+//		CommonSteps.user_enters_usernamePasswordForRealDevice(username, password);
+//
+//	}
+	
+	@Then("user enters username and password for realDevice testing$")
+	public void user_enters_usernamePasswordForRealDevice() throws Exception {
+		CommonSteps.user_enters_usernamePasswordForRealDevice();
 
 	}
-	
 	
 
 	//MB

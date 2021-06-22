@@ -515,8 +515,8 @@ public class Stepdef_19A extends WEB_Methods {
 		@Step
 		public void testCaseTestRsult(String textValue,String tag) throws Exception {
 		       try {
-		    	   Report_getscreenShot("Before Validation Page");
-				driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
+		    	   Report_getscreenShot("Before Validation Page"+RandomStringUtils.randomAlphanumeric(8));
+				driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 				if(driver.findElements(By.xpath("//h6[contains(.,'Test Results')]")).size()<1) {
 					driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				}
@@ -534,7 +534,7 @@ public class Stepdef_19A extends WEB_Methods {
 				logger.error("Test case is failed. Please look into logs for more details" +driver.findElement(By.xpath("//div[contains(@class,'test-case-error-message')]")).getText());
 						  
 				 }	
-				 Report_getscreenShot("Validation Page");
+				 Report_getscreenShot("Validation Page" +RandomStringUtils.randomAlphanumeric(8));
 				  // Assert.assertEquals(true, tag.contains(driver.findElement(By.xpath("//td[contains(text(),'"+tag+"')]")).getText()));
 				   Assert.assertEquals("Test case link", textValue, driver.findElement(By.xpath("(//a[contains(@class,'test-case-link')])[1]")).getText());
 				   
@@ -1035,6 +1035,21 @@ public class Stepdef_19A extends WEB_Methods {
 			
 			Thread.sleep(2000);
 		}
+		
+		@Step
+		public void newFolderCreation(String newfolderName) throws Exception {
+			
+			WEB_click(WEB_findElement("STRING", "//span[@class='fa fa-folder']"));
+			WEB_click(WEB_findElement("STRING", "//td[@class='menu-text'][contains(.,'New Folder...')]"));
+			
+			driver.findElement(By.id("folderName")).sendKeys(newfolderName);
+			Report_getscreenShot("Input values for New Folder Creation Screenshot");
+			driver.findElement(By.xpath("//span[contains(.,'Add New Folder')]")).click();
+			Report_getscreenShot("New Folder Creation Screenshot"+ RandomStringUtils.randomAlphanumeric(6));
+		
+		}
+		
+		
 		
 		@Step
 		public void selectFolders(String testCase,String testCaseName) throws Exception {
