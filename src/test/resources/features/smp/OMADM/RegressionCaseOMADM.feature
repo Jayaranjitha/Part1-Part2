@@ -1,7 +1,7 @@
 @RegressionCasePartOMADM @test @testomadm @testlocal @testprodomadm1
 Feature: Motive Bridge Regression Cases for OMADM Part 01
 
-@MotiveBridge001
+@MotiveBridge019
 Scenario: MB_Sanity_DM_Upgrade-001- Motive Bridge Log In Page
   
 	Given user is already on Login Page 
@@ -14,6 +14,7 @@ Scenario: MB_Sanity_DM_Upgrade-001-Motive Bridge UI validation
 	Then user verifies the "Manage_Devices" button
 	Then user verifies the "Quick_Run" button 
 
+@MotiveBridge019
 Scenario: OMADM Create Device in LTE mode
 
     Given user clicks on "Manage Devices"
@@ -103,7 +104,7 @@ Scenario: MB_Regression_OMADM-008 & MB_Regression_OMADM-010
 	#Then user closes the current window 
 	Then user closes the simulator in port "5546" 
 	
-
+@MotiveBridge019
 Scenario: VZW_GENERIC_AUTO :MB_Regression_OMADM-011, MB_Regression_OMADM-013,MB_Regression_OMADM-014
 
 Given user closes the current window 
@@ -142,6 +143,7 @@ Given user closes the current window
 	Then user closes the simulator in port "5546" 
 	#Then user closes the current window 
 
+@MotiveBridge019
 Scenario: VZW_LTEFIELDOA_IOT_AUTO : MB_Regression_OMADM-015
     
     Given user closes the current window 
@@ -168,6 +170,7 @@ Scenario: VZW_LTEFIELDOA_IOT_AUTO : MB_Regression_OMADM-015
 	Then user closes the simulator in port "5546" 
 	#Then user closes the current window 
 	
+@MotiveBridge019
 Scenario: OMADM Delete Device
     
      Given user closes the current window 
