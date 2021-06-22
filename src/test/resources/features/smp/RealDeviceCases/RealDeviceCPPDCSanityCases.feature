@@ -1,4 +1,4 @@
-@DCSanityCases  @testlocal @real1 @realdevice1
+@DCSanityCases  @testlocal @reals1 @realdevice1
 Feature: Motive Bridge DC Sanity cases  
 
 @MotiveBridge001
@@ -121,6 +121,6 @@ Scenario: MB_Sanity_DC_Upgrade-004-VZW-Ch02-Server-Parameters-LWM2M
 Scenario: Logout from Motive Bridge 
     Given user closes the current window
     Then user switch back to parent window
-	And user Click on log off for the logged in user 
+	Then user clicks logout for "REAL device User"
 	 
     

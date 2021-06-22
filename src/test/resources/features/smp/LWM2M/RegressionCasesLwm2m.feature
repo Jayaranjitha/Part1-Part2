@@ -70,7 +70,7 @@ Scenario: MB_Regression_LWM2M-002- VZW-Ch11-FOTA-WIFI-ON
      And user clicks on "VZW-Ch11-FOTA-WIFI-ON" test set
      Then user selects the "PlayButton" button
      Then user is navigated to the "VZW-Ch11-FOTA-WIFI-ON" testSet Page  
-    Then user select the "Firmware_Update_OB_11_02_Wifi_On" folders for test case " 11.02 Firmware Update (Out-Band) Wifi On"
+    Then user select the "Firmware_Update_OB_11_02_Wifi_On" folders for test case "11.02 Firmware Update (Out-Band) Wifi On"
      And user runs the simulator "LWM2M"
      Then user selects the "Play" button    
      Then user select the "CONTINUE" from status to start the test
