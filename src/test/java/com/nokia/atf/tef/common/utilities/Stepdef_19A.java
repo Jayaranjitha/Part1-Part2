@@ -1322,7 +1322,7 @@ public class Stepdef_19A extends WEB_Methods {
 		@Test
 		public void verifyQuickRunTestSuite() throws Exception {
 			
-			 Thread.sleep(2000);
+			 Thread.sleep(4000);
 			 String textExpected=Stepdef_CommonSteps.lwm2miccid+"_"+Stepdef_CommonSteps.lwm2mmsisdn+"_quickrun";
 			 String expected = "Test Suite Progress - " +Stepdef_CommonSteps.lwm2miccid+"_"+Stepdef_CommonSteps.lwm2mmsisdn+"_quickrun";
 			 
