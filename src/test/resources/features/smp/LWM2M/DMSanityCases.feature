@@ -125,6 +125,7 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch13-UAT-Special-Tests
    Then user selects the "PlayButton" button
    Then user is navigated to the "VZW-Ch13-UAT-Special-Tests" testSet Page
    Then user select the "VZW_Ch13_SMS_Based_Reboot" folders for test case "13.03 SMS Based Device Reboot"
+    And user runs the simulator "LWM2M"
    Then user selects the "Play" button
    Then user select the "CONTINUE" from status to start the test
     Then user scroll to the right to "Submit" button
