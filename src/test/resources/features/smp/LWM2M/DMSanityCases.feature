@@ -130,7 +130,6 @@ Scenario: MB_Sanity_DM_Upgrade-004- VZW-Ch13-UAT-Special-Tests
    Then user select the "CONTINUE" from status to start the test
     Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button
-     And user runs the simulator "LWM2M"	
     Then user select the "PASS" from status to start the test
     Then user scroll to the right to "Submit" button
      Then user selects the "Submit" button
